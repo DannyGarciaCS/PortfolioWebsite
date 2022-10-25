@@ -17,3 +17,9 @@ body { font-family: Epilogue, Oxygen, Arial, Helvetica, sans-serif; }
     -ms-user-select: none;
     user-select: none;
 }
+
+#three_element {
+  width: 100%;
+  height: 950px;
+  background-color: green;
+}
