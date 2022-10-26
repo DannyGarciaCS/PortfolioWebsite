@@ -1,16 +1,19 @@
 
 // Imports Three.js
 import * as THREE from "https://unpkg.com/three@0.145.0/build/three.module.js";
+
+// Debugging GUI ///////////////////////////////////////////////////////////////
+const gui = new dat.GUI();
+////////////////////////////////////////////////////////////////////////////////
  
 // Waits for css to load
 document.addEventListener("DOMContentLoaded", () => {
 
-    const loader = new THREE.TextureLoader();
+    // Loads used textures
+    const loader = new THREE.TextureLoader();    
+    const map = loader.load("images/map.png")
     const displacementMap = loader.load("images/displacementMap.png")
     const alphaMap = loader.load("images/alphaMap.png")
-
-    // Debugging GUI
-    const gui = new dat.GUI();
 
     // Scene
     const scene = new THREE.Scene();
@@ -28,20 +31,32 @@ document.addEventListener("DOMContentLoaded", () => {
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setClearColor(0xffffff, 0);
 
-     // Objects
-     const material = new THREE.MeshStandardMaterial({color: "gray", displacementMap, displacementScale: 0.35, alphaMap, transparent: true, wireframe: true, depthTest: false});
-     const plane = new THREE.Mesh(new THREE.PlaneGeometry(3, 3, 64, 64), material);
-     scene.add(plane);
+     // Main plane
+     const mMaterial = new THREE.MeshStandardMaterial({
+        color: "gray", displacementMap, displacementScale: 0.5, map, alphaMap, transparent: true, depthTest: false, opacity: 0.75
+    }); const mPlane = new THREE.Mesh(new THREE.PlaneGeometry(3, 3, 64, 64), mMaterial);
+    mPlane.rotation.x = 5;
+    scene.add(mPlane);
+
+     // Wireframe plane
+     const wMaterial = new THREE.MeshStandardMaterial({
+        color: "white", displacementMap, displacementScale: 0.5, alphaMap, transparent: true, wireframe: true, depthTest: false, opacity: 0.25
+    }); const wPlane = new THREE.Mesh(new THREE.PlaneGeometry(3, 3, 64, 64), wMaterial);
+    wPlane.rotation.x = 5;
+    scene.add(wPlane);
 
     // Lights
-    const pointLight = new THREE.PointLight(0xffffff, 2);
-    pointLight.position.x = 2;
-    pointLight.position.y = 3;
-    pointLight.position.z = 4;
+    const pointLight = new THREE.PointLight(0x2283d9, 2.3);
+    pointLight.position.x = 6.5;
+    pointLight.position.y = 2;
+    pointLight.position.z = 6.5;
     scene.add(pointLight);
  
-     plane.rotation.x = 5;
-     gui.add(plane.rotation, "x").min(0).max(10);
+    ////////////////////////////////////////////////////////////////////////////////
+     
+     gui.add(wPlane.rotation, "x").min(0).max(10).onChange(() => {
+        mPlane.rotation.x = wPlane.rotation.x;
+     });
      gui.add(pointLight, "intensity").min(0).max(3);
      gui.add(pointLight.position, "x").min(-30).max(30);
      gui.add(pointLight.position, "y").min(-5).max(5);
@@ -51,16 +66,26 @@ document.addEventListener("DOMContentLoaded", () => {
      gui.addColor(col, "color").onChange(() => {
         pointLight.color.set(col.color);
      })
+     ////////////////////////////////////////////////////////////////////////////////
 
-     const clock = new THREE.Clock()
-     
+    // Event handling
+    document.addEventListener("mousemove", animateTerrain);
+    let mouseY = 0;
+    function animateTerrain(event) { mouseY = event.clientY; }
+
     // Main renderer loop
+    const clock = new THREE.Clock();
     function animate() {
 
+        // Rotates env
         const elapsedTime = clock.getElapsedTime();
-        plane.rotation.z = 0.25 * elapsedTime;
+        mPlane.rotation.z = 0.25 * elapsedTime;
+        wPlane.rotation.z = 0.25 * elapsedTime;
 
-        // Natural rotation
+        mPlane.material.displacementScale = 0.4 + mouseY / 4500
+        wPlane.material.displacementScale = 0.4 + mouseY / 4500
+
+        // REnders frame
         requestAnimationFrame(animate);
         renderer.render(scene, camera);
 
