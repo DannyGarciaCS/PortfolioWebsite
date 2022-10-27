@@ -1,10 +1,6 @@
 
 // Imports Three.js
 import * as THREE from "https://unpkg.com/three@0.145.0/build/three.module.js";
-
-// Debugging GUI ///////////////////////////////////////////////////////////////
-const gui = new dat.GUI();
-////////////////////////////////////////////////////////////////////////////////
  
 // Waits for css to load
 document.addEventListener("DOMContentLoaded", () => {
@@ -51,22 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
     pointLight.position.y = 2;
     pointLight.position.z = 6.5;
     scene.add(pointLight);
- 
-    ////////////////////////////////////////////////////////////////////////////////
-     
-     gui.add(wPlane.rotation, "x").min(0).max(10).onChange(() => {
-        mPlane.rotation.x = wPlane.rotation.x;
-     });
-     gui.add(pointLight, "intensity").min(0).max(3);
-     gui.add(pointLight.position, "x").min(-30).max(30);
-     gui.add(pointLight.position, "y").min(-5).max(5);
-     gui.add(pointLight.position, "z").min(-10).max(100);
-
-     const col = { color: "#ffffff" }
-     gui.addColor(col, "color").onChange(() => {
-        pointLight.color.set(col.color);
-     })
-     ////////////////////////////////////////////////////////////////////////////////
 
     // Event handling
     document.addEventListener("mousemove", animateTerrain);
