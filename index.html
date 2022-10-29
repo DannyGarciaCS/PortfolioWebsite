@@ -20,6 +20,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/icon152.png" >
 
     <!-- CSS -->
+    <link rel="stylesheet" href="css/css_generic.css">
     <link rel="stylesheet" href="css/css_main.css">
     
 </head>
@@ -27,74 +28,72 @@
 <body>
 
     <!-- Website's navbar -->
-    <nav class="navbar">
-        <div class="navbar" id="content">
+    <nav>
+        <div class="navbar">
 
-            <!-- Left-hand elements -->
-            <a id="nav_icon" href="#"">
-                <img id="nav_icon" src="images/favicon/icon152.png" alt="Website logo">
+            <!-- Navbar left-hand -->
+            <a class="navbar left unselectable">
+                <img class="navbar" src="images/logo.png" alt="Website logo">
+                <p class="navbar">Danny Garcia CS</p>
             </a>
 
-            <!-- Right-hand elements -->
-            <ul class="navbar">
-                
-                <li class="navbar">
-                    <a class="navbar" href=""><span>Home</span></a>
-                </li>
-                <li class="navbar">
-                    <a class="navbar" href=""><span>About</span></a>
-                </li>
-                <li class="navbar">
-                    <a class="navbar" href=""><span>Work</span></a>
-                </li>
-                <li class="navbar">
-                    <a class="navbar" href=""><span>Contact</span></a>
-                </li>
-                <li class="navbar">
-                    <a id="resume" href="" >Resume</a>
-                </li>
-                <li class="navbar last">
-                    <a id="github" href="https://github.com/DannyGarciaCS">Github</a>
-                </li>
+            <!-- Navbar right-hand -->
+            <ul class="navbar unselectable">
+                <li class="navbar"><a class="navbar right" href="">Home</a></li>
+                <li class="navbar"><a class="navbar right" href="">About</a></li>
+                <li class="navbar"><a class="navbar right" href="">Work</a></li>
+                <li class="navbar"><a class="navbar right" href="">Contact</a></li>
+
+                <li class="navbar"><a class="resume" href="" >Resume</a></li>
+                <li class="navbar last"><a class="github" href="https://github.com/DannyGarciaCS">GitHub</a></li>
             </ul>
+
         </div>
-
-         <!-- Website's persistent border -->
-        <div id="border"></div>
-
     </nav>
 
-    <!-- Website intro -->
-    <header class="header">
+    <!-- Website's border -->
+    <div class="border"></div>
 
-        <!-- Main header content -->
-        <section>
-            <div>
-                <div></div>
-                <!--<div id="three_element"><canvas id="three"></canvas></div>-->
-            </div>
-        </section>
+    <!-- Intro section -->
+    <section class="intro main_container">
 
-        <!-- Header conclusion -->
-        <a class="header" id="scroll_prompt">⮟ SCROLL</a>
+        <!-- Main section content -->
+        <div>
+            <a class="header">⮟ SCROLL</a>
+        </div>
+        
         <div class="transition_ltd"></div>
 
-    </header>
+    </section>
 
     <!-- About me section -->
-    <section class="about">
+    <section class="about main_container">
+
+        <!-- Main section content -->
+        <div>
+        </div>
+
         <div class="transition_dtl"></div>
     </section>
 
     <!-- Work information section -->
-    <section class="work">
+    <section class="work main_container">
+
+        <!-- Main section content -->
+        <div>
+        </div>
+
         <div class="transition_ltd"></div>
     </section>
 
     <!-- Contact me section -->
-    <section class="contact"></section>
+    <section class="contact">
 
-    
+        <!-- Main section content -->
+        <div>
+        </div>
+
+    </section>
     
     <!-- Javascript -->
     <script src="js/js_three.js" type="module"></script>
