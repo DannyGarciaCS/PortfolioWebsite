@@ -1,11 +1,16 @@
 
 nav {
-  top: 0;
+  top: -100%;
   width: 100%;
   z-index: 101;
   position: fixed;
   background-color: white;
-  box-shadow: rgb(0 0 0 / 5%) 0px 5px 10px;
+  animation: slide_down 1s ease-in-out 1s forwards;
+}
+
+@keyframes slide_down {
+  from {top: -5em; box-shadow: rgb(0 0 0 / 0%) 0px 5px 10px;}
+  to {top: 0; box-shadow: rgb(0 0 0 / 3%) 0px 5px 15px;}
 }
 
 div.navbar {
@@ -49,12 +54,27 @@ a.navbar.right {
   color: #0f1b61;
 }
 
+div.intro_transition {
+  display: absolute;
+  z-index: 101;
+  width: 99vw;
+  height: 99vh;
+  background-color: #5f73e7;
+
+  animation: slide_left 1s ease-in-out 1s forwards;
+}
+
+@keyframes slide_left {
+  from {width: 99vw;}
+  to {width: 0vw;}
+}
+
 a.nav_button {
   font-size: 0.9em;
   padding: 0.5em;
   border-radius: 0.4em;
-  color: #7f00e0;
-  border: 1px solid #7f00e0;
+  color: #5f73e7;
+  border: 1px solid #5f73e7;
   transition: background-color 0.2s ease-in;
 }
 
@@ -85,7 +105,7 @@ div.border {
   flex-direction: column;
 }
 
-section.intro {
+section.home {
   height: calc(100% + 8em);
   background-color: #f4f9fc;
 }
