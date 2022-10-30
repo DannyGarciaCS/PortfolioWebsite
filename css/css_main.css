@@ -4,8 +4,8 @@ nav {
   width: 100%;
   z-index: 101;
   position: fixed;
-  background-color: blue;
-  box-shadow: rgb(0 0 0 / 10%) 0px 5px 10px;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0px 5px 10px;
 }
 
 div.navbar {
@@ -13,7 +13,6 @@ div.navbar {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  background-color: red;
 }
 
 a.navbar.left {
@@ -26,11 +25,7 @@ img.navbar {
   max-height: 2.5em;
   width: auto;
   margin-right: 0.5em;
-  background-color: pink;
-}
-
-p.navbar {
-  background-color: blueviolet;
+  margin: 0.5em;
 }
 
 ul.navbar {
@@ -44,22 +39,28 @@ li.navbar {
   display: flex;
   align-items: center;
   padding-left: 1.2em;
-  background-color: yellow;
 }
 
 a.navbar.right {
+  font-size: 0.9em;
   height: 100%;
   display: flex;
   align-items: center;
-  background-color: blueviolet;
+  color: #0f1b61;
 }
 
-a.resume {
-  background-color: red;
+a.nav_button {
+  font-size: 0.9em;
+  padding: 0.5em;
+  border-radius: 0.4em;
+  color: #7f00e0;
+  border: 1px solid #7f00e0;
+  transition: background-color 0.2s ease-in;
 }
 
-a.github {
-  background-color: green;
+a.nav_button:hover {
+  transition: background-color 0.2s ease-in;
+  background-color: #e8dcf8;
 }
 
 div.border {
@@ -71,9 +72,9 @@ div.border {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border-left: 1.2em solid blueviolet;
-  border-right: 1.2em solid blueviolet;
-  border-bottom: 1.2em solid blueviolet;
+  border-left: 1.2em solid white;
+  border-right: 1.2em solid white;
+  border-bottom: 1.2em solid white;
   pointer-events: none;
 }
 
@@ -86,32 +87,32 @@ div.border {
 
 section.intro {
   height: calc(100% + 8em);
-  background-color: green;
+  background-color: #f4f9fc;
 }
 
 section.about {
   height: calc(100% + 8em);
-  background-color: blue;
+  background-color: #cddaf7;
 }
 
 section.work {
   height: calc(100% + 8em);
-  background-color: green;
+  background-color: #f4f9fc;
 }
 
 section.contact {
   height: calc(100% + 8em);
-  background-color: blue;
+  background-color: #cddaf7;
 }
 
 div.transition_ltd {
   width: 100%;
   height: 8em;
-  background: linear-gradient(to right bottom, green 49%, blue 50%);
+  background: linear-gradient(to right bottom, #f4f9fc 49%, #cddaf7 50%);
 }
 
 div.transition_dtl {
   width: 100%;
   height: 8em;
-  background: linear-gradient(to right bottom, blue 49%, green 50%);
+  background: linear-gradient(to right bottom, #cddaf7 49%, #f4f9fc 50%);
 }
