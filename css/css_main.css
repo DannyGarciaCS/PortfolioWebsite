@@ -109,21 +109,32 @@ a.navbar.right {
   color: #0f1b61;
 }
 
+a.navbar.right:hover {
+  font-weight: bold;
+}
+
+
+.selected {
+  color: #5f73e7 !important;
+  font-weight: bold;
+}
+
+
+
 a.nav_button {
   font-size: 0.9em;
   padding: 0.5em;
   border-radius: 0.4em;
   color: #5f73e7;
-  border: 1px solid #5f73e7;
+  border: 2px solid #5f73e7;
   transition: background-color 0.2s ease-in;
+  font-weight: bold;
 }
 
 a.nav_button:hover {
   transition: background-color 0.2s ease-in;
   background-color: #e8dcf8;
 }
-
-
 
 .main_container {
   width: 100%;
@@ -132,10 +143,7 @@ a.nav_button:hover {
   flex-direction: column;
 }
 
-section.home {
-  height: calc(100% + 8em);
-  background-color: #f4f9fc;
-}
+
 
 section.about {
   height: calc(100% + 8em);
@@ -144,7 +152,7 @@ section.about {
 
 section.work {
   height: calc(100% + 8em);
-  background-color: #f4f9fc;
+  background-color: #e4f2fa;
 }
 
 section.contact {
@@ -155,11 +163,11 @@ section.contact {
 div.transition_ltd {
   width: 100%;
   height: 8em;
-  background: linear-gradient(to right bottom, #f4f9fc 49%, #cddaf7 50%);
+  background: linear-gradient(to right bottom, #e4f2fa 49%, #cddaf7 50%);
 }
 
 div.transition_dtl {
   width: 100%;
   height: 8em;
-  background: linear-gradient(to right bottom, #cddaf7 49%, #f4f9fc 50%);
+  background: linear-gradient(to right bottom, #cddaf7 49%, #e4f2fa 50%);
 }

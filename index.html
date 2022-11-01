@@ -22,6 +22,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/css_generic.css">
     <link rel="stylesheet" href="css/css_main.css">
+    <link rel="stylesheet" href="css/css_home.css">
     
 </head>
 
@@ -61,18 +62,18 @@
         <div class="navbar">
 
             <!-- Navbar left-hand -->
-            <a class="navbar left unselectable">
+            <a class="navbar left unselectable" href="">
                 <img class="navbar" src="images/logo.png" alt="Website logo">
             </a>
 
             <!-- Navbar right-hand -->
             <ul class="navbar unselectable">
-                <li class="navbar"><a class="navbar right" href="">Home</a></li>
-                <li class="navbar"><a class="navbar right" href="">About</a></li>
-                <li class="navbar"><a class="navbar right" href="">Work</a></li>
-                <li class="navbar"><a class="navbar right" href="">Contact</a></li>
+                <li class="navbar"><a class="navbar selected right" href="#">Home</a></li>
+                <li class="navbar"><a class="navbar right" href="#">About</a></li>
+                <li class="navbar"><a class="navbar right" href="#">Work</a></li>
+                <li class="navbar"><a class="navbar right" href="#">Contact</a></li>
 
-                <li class="navbar"><a class="nav_button" href="" >Resume</a></li>
+                <li class="navbar"><a class="nav_button" href="#" >Resume</a></li>
                 <li class="navbar last"><a class="nav_button" href="https://github.com/DannyGarciaCS">GitHub</a></li>
             </ul>
 
@@ -86,7 +87,23 @@
 
         <!-- Main section content -->
         <div>
-            <a class="header">⮟ SCROLL</a>
+
+            <div class="threejs_row">
+                <div class="threejs_col">
+                    <div id="canvas_element"><canvas id="element"></canvas></div>
+                </div>
+            </div>
+
+            <div class="intro_row">
+                <div class="intro_col">
+                    <p class="home_h1">Hello, my name is</p>
+                    <p class="home_h2">Danny Garcia.</p>
+                    <p class="home_h3">I'm an App developer.</p>
+                    <p class="home_h4">I like making high quality apps that people love using. I also have experience with AI, automated testing, and web development.</p>
+                </div>
+            </div>
+
+            <a>⮟ SCROLL</a>
         </div>
         
         <div class="transition_ltd"></div>
