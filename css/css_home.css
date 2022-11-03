@@ -9,10 +9,11 @@ section.home {
     height: 100%;
     position: absolute;
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 .threejs_col {
-    width: 50%;
+    width: 35%;
+    margin-left: 500px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -25,7 +26,8 @@ section.home {
     justify-content: center;
 }
 .intro_col {
-    width: 35%;
+    width: 55%;
+    margin-right: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,6 +63,6 @@ max-width: 50%;
 
 
 div#canvas_element {
-width: 45%;
-background-color: blue;
+    height: 600px;
+    width: 700px;
 }
