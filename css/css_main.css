@@ -37,11 +37,3 @@ div.transition_dtl {
   height: 8em;
   background: linear-gradient(to right bottom, #cddaf7 49%, #e4f2fa 50%);
 }
-
-#my-gui-container {
-  display: none;
-  position: absolute;
-  top: 60px;
-  left: 20px;
-  z-index: 1000;
-}

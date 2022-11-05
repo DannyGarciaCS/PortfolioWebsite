@@ -26,8 +26,8 @@ section.home {
     justify-content: center;
 }
 .intro_col {
-    width: 55%;
-    margin-right: 300px;
+    width: 30%;
+    margin-right: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,7 +58,7 @@ color: #3345b1;
 margin: 0;
 font-size: 1.4em;
 color: #0f1b61;
-max-width: 50%;
+max-width: 95%;
 }
 
 
