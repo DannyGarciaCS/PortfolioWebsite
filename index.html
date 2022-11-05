@@ -141,13 +141,32 @@
 
         <!-- Main section content -->
         <div>
-        </div>
 
+            <p class="contact_h1">Get In Touch</p>
+            <p class="contact_h2">Have any questions or want to work together? Send me a mail.</p>
+
+            <form action="https://formsubmit.co/cc894011de2f22f6d5af79dc40110a1c" method="POST">
+
+                <!-- Honeypot -->
+                <input type="text" name="_honey" style="display:none;">
+
+                <!-- Disable Captcha -->
+                <input type="hidden" name="_captcha" value="false">
+
+                <!-- Form redirect -->
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/images/logo.png">
+
+                <input placeholder="Your Name" type="text" name="Name" required>
+                <input placeholder="Your Email Address" type="email" name="Email" required>
+                <textarea placeholder="Your Message" type="text" name="Message" required></textarea>
+                <button type="submit" id="submit">SEND</button>
+            </form>
+
+        </div>
     </section>
     
     <!-- Javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js" type="text/javascript"></script>
     <script src="js/js_minthreejs.js"></script>
     <script src="js/js_gltfloader.js"></script>
     <script src="js/js_three.js" type="module"></script>
