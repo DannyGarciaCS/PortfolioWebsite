@@ -1,14 +1,16 @@
+let house;
+var mixer;
+const gui = new dat.GUI({autoPlace: false})
+gui.domElement.id = 'gui';
+var customContainer = document.getElementById('my-gui-container');
+customContainer.appendChild(gui.domElement);
 
-// Imports Three.js
-import * as THREE from "https://unpkg.com/three@0.145.0/build/three.module.js";
- 
 // Waits for css to load
 document.addEventListener("DOMContentLoaded", () => {
 
     // Loads used textures
-    const loader = new THREE.TextureLoader();    
-    const displacementMap = loader.load("images/displacementMap2.png")
-    const alphaMap = loader.load("images/alphaMap.png")
+    const loader = new THREE.TextureLoader();
+    const map = loader.load("images/back.png")
 
     // Scene
     const scene = new THREE.Scene();
@@ -16,66 +18,92 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Camera
     const camera = new THREE.PerspectiveCamera(75, threeElement.offsetWidth / threeElement.offsetHeight, 0.1, 1000);
-    camera.position.x = 0;
-    camera.position.y = 0;
-    camera.position.z = 3;
+    camera.position.set(0, 0.5, 2.2);
+
+    gui.add(camera.position, "x").min(-5).max(5);
+    gui.add(camera.position, "y").min(-5).max(5);
+    gui.add(camera.position, "z").min(-5).max(5);
     
     // Renderer
-    const renderer = new THREE.WebGLRenderer({ antialias: true, canvas: document.getElementById("element") });
+    const renderer = new THREE.WebGLRenderer({ antialias: true, canvas: document.getElementById("element"), alpha:true });
     renderer.setSize(threeElement.offsetWidth, threeElement.offsetHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setClearColor(0xffffff, 0);
 
-     // Wireframe plane
-     const wMaterial = new THREE.MeshStandardMaterial({
-        color: "white", displacementMap, displacementScale: 0.5, alphaMap, transparent: true, wireframe: true, depthTest: false, opacity: 0.25
-    }); const wPlane = new THREE.Mesh(new THREE.PlaneGeometry(3, 3, 128, 128), wMaterial);
-    wPlane.rotation.x = 5;
-    scene.add(wPlane);
+
+
+    const gltfLoader = new THREE.GLTFLoader();
+    gltfLoader.load("model/scene.gltf", function(gltf){
+
+        scene.add(gltf.scene);
+        house = gltf.scene.children[0];
+        house.rotation.z = 2
+
+        mixer= new THREE.AnimationMixer(gltf.scene);
+        gltf.animations.forEach((clip) => {
+        mixer.clipAction(clip).play(); });
+        scene.add(gltf.scene);
+
+        animate();
+    });
+
+    const backdropMaterial = new THREE.MeshBasicMaterial({
+    map, transparent: true
+    }); const backdrop = new THREE.Mesh(new THREE.PlaneGeometry(3, 3, 1, 1), backdropMaterial);
+    let backdropY = 1.0;
+    let backdropX = 0.0;
+    backdrop.rotation.x = 6.3;
+    backdrop.position.y = backdropY;
+    backdrop.position.z = -1;
+    scene.add(backdrop);
+    gui.add(backdrop.position, "x").min(0).max(10);
+    gui.add(backdrop.position, "y").min(0).max(10);
+    gui.add(backdrop.position, "z").min(-10).max(0);
 
     // Lights
-    const pointLight = new THREE.PointLight(0x2283d9, 2.3);
-    pointLight.position.x = 6.5;
-    pointLight.position.y = 2;
-    pointLight.position.z = 6.5;
-    scene.add(pointLight);
-
-    let trueDisplacement = 0.15;
-    let direction = 0;
-    let displacementMax = 0.25;
-    let displacementMin = -0.25;
-    let displacementRate = 0.0005;
+    const ambientLight = new THREE.AmbientLight(0x404040, 5);
+    scene.add(ambientLight);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 5);
+    directionalLight.position.set(10, 10, 10);
+    scene.add(directionalLight);
 
     // Event handling
     document.addEventListener("mousemove", animateTerrain);
     let mouseY = 0;
-    function animateTerrain(event) { mouseY = event.clientY; }
+    let mouseX = 0;
+    function animateTerrain(event) {
+        mouseY = event.clientY;
+        mouseX = event.clientX;
+    }
 
     // Main renderer loop
-    const clock = new THREE.Clock();
     function animate() {
 
         // Rotates env
-        const elapsedTime = clock.getElapsedTime();
-        wPlane.rotation.z = 0.25 * elapsedTime;
-        wPlane.material.displacementScale = trueDisplacement + 0.4 + mouseY / 4500;
+        let xTarget = 0;
+        if(mouseX != 0) { xTarget = (-mouseX + 960) / 6000 ; }
+        else { xTarget = 0; }
+        gsap.to(backdrop.position, {
+            x: xTarget,
+            y: backdropY + mouseY / 6000,
+            duration: 1
+        })
+        
+        house.rotation.z -= 0.0005;
+
+        gsap.to(house.position, {
+            x: -xTarget,
+            y: -mouseY / 6000,
+            duration: 1
+        })
+
+
+        mixer.update( 0.01 )
 
         // REnders frame
         requestAnimationFrame(animate);
         renderer.render(scene, camera);
 
-        if(direction == 0) {
-            trueDisplacement -= displacementRate;
-            if(trueDisplacement <= displacementMin) {
-                direction = 1;
-            }
-        } else if(direction == 1) {
-            trueDisplacement += displacementRate;
-            if(trueDisplacement >= displacementMax) {
-                direction = 0;
-            }
-        }
-
-    } animate()
+    }
 
 });
