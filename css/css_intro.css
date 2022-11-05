@@ -17,6 +17,8 @@ div.intro_transition {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 100 !important;
+    transition: opacity 0.8s ease-in;
   }
   
   .welcome path {
@@ -24,14 +26,14 @@ div.intro_transition {
     animation-play-state: paused;
   }
   
-  .welcome path:nth-child(1) { animation: welcome_animation 1.8s ease-in-out forwards 0.2s; }
-  .welcome path:nth-child(2) { animation: welcome_animation 1.8s ease-in-out forwards 0.4s; }
-  .welcome path:nth-child(3) { animation: welcome_animation 1.8s ease-in-out forwards 0.6s; }
-  .welcome path:nth-child(4) { animation: welcome_animation 1.8s ease-in-out forwards 0.8s; }
-  .welcome path:nth-child(5) { animation: welcome_animation 1.8s ease-in-out forwards 1.0s; }
-  .welcome path:nth-child(6) { animation: welcome_animation 1.8s ease-in-out forwards 1.2s; }
-  .welcome path:nth-child(7) { animation: welcome_animation 1.8s ease-in-out forwards 1.4s; }
-  .welcome path:nth-child(8) { animation: welcome_animation 1.8s ease-in-out forwards 1.6s; }
+  .welcome path:nth-child(1) { animation: welcome_animation 1.8s ease-in-out forwards 0.8s; }
+  .welcome path:nth-child(2) { animation: welcome_animation 1.8s ease-in-out forwards 1.0s; }
+  .welcome path:nth-child(3) { animation: welcome_animation 1.8s ease-in-out forwards 1.2s; }
+  .welcome path:nth-child(4) { animation: welcome_animation 1.8s ease-in-out forwards 1.4s; }
+  .welcome path:nth-child(5) { animation: welcome_animation 1.8s ease-in-out forwards 1.6s; }
+  .welcome path:nth-child(6) { animation: welcome_animation 1.8s ease-in-out forwards 1.8s; }
+  .welcome path:nth-child(7) { animation: welcome_animation 1.8s ease-in-out forwards 2.0s; }
+  .welcome path:nth-child(8) { animation: welcome_animation 1.8s ease-in-out forwards 2.2s; }
   
   @keyframes welcome_animation {
     from { fill: transparent; }
