@@ -5,12 +5,12 @@ section.about {
 div.about_body {
   display: flex;
   justify-content: center;
-  margin-top: 3.5em;
+  margin-top: 2.5em;
   margin-bottom: 2em;
 }
 
 p.about_h1 {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: bold;
   color: #3345b1;
   text-align: center;
@@ -30,9 +30,9 @@ div.about_body_txt {
   flex-direction: column;
   justify-content: center;
   padding: 0 50px;
-  font-size: 1.4em;
+  font-size: 1.2em;
   color: #0f1b61;
-  width: 600px;
+  width: 550px;
 }
 
 p.about_p1 {
@@ -52,21 +52,21 @@ div.about_body_img {
 div.about_body_img_outline {
   z-index: 49;
   position: absolute;
-  width: 250px;
-  height: 250px;
-  margin-top: 60px;
-  margin-left: 60px;
+  width: 275px;
+  height: 275px;
+  margin-top: 45px;
+  margin-left: 45px;
   border-radius: 1em;
-  border: 4px solid white;
+  border: 3px solid white;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
 img.portrait {
   position: absolute;
-  margin-left: 40px;
-  margin-top: 40px;
+  margin-left: 25px;
+  margin-top: 25px;
   z-index: 50;
-  width: 250px;
+  width: 275px;
   border-radius: 1em;
-  border: 4px solid white;
+  border: 3px solid white;
 }
