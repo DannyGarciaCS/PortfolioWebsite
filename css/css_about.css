@@ -1,4 +1,72 @@
 section.about {
-    height: calc(100% + 8em);
-    background-color: #cddaf7;
-  }
+  background-color: #cddaf7;
+}
+
+div.about_body {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5em;
+  margin-bottom: 2em;
+}
+
+p.about_h1 {
+  font-size: 3em;
+  font-weight: bold;
+  color: #3345b1;
+  text-align: center;
+  margin: 0;
+  margin-top: 2.5em;
+}
+
+p.about_h2 {
+  font-size: 2em;
+  color: #3345b1;
+  text-align: center;
+  margin: 0;
+}
+
+div.about_body_txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px;
+  font-size: 1.4em;
+  color: #0f1b61;
+  width: 600px;
+}
+
+p.about_p1 {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+p.about_p2 {
+  margin: 0;
+}
+
+div.about_body_img {
+  height: 350px;
+  width: 350px;
+}
+
+div.about_body_img_outline {
+  z-index: 49;
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  margin-top: 60px;
+  margin-left: 60px;
+  border-radius: 1em;
+  border: 4px solid white;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+img.portrait {
+  position: absolute;
+  margin-left: 40px;
+  margin-top: 40px;
+  z-index: 50;
+  width: 250px;
+  border-radius: 1em;
+  border: 4px solid white;
+}

@@ -20,6 +20,10 @@ body, html {
 
 *::-webkit-scrollbar-thumb { background-color: #5f73e7; }
 
+*::selection { background: #a9b4f1; }
+
+*::-moz-selection { background: #a9b4f1; }
+
 a { text-decoration: none; }
 
 .unselectable {
