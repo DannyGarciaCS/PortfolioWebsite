@@ -103,6 +103,7 @@ td.about_title {
 td.about_td {
   width: 150px;
   height: 1.5em;
+  box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   border: 4px solid #d8e3fa;
@@ -111,6 +112,7 @@ td.about_td {
 td.about_td2 {
   width: 91px;
   height: 1.5em;
+  box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   border: 4px solid #d8e3fa;
