@@ -70,3 +70,52 @@ img.portrait {
   border-radius: 1em;
   border: 3px solid white;
 }
+
+.about_technologies {
+  display: flex;
+  justify-content: center;
+}
+
+table.about {
+  margin-top: 0.8em;
+  font-size: 1em;
+  color: #0f1b61;
+  border-collapse: collapse;
+}
+
+span.about_pointer {
+  color:#3345b1;
+}
+
+td.about_title {
+  text-align: center;
+  height: 1.7em;
+  font-size: 1.2em;
+  padding: 10px 0;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 4px solid #d8e3fa;
+  border-radius: 50px 50px 0px 0px;
+}
+
+td.about_td {
+  width: 150px;
+  height: 1.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 4px solid #d8e3fa;
+}
+
+td.about_td2 {
+  width: 91px;
+  height: 1.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 4px solid #d8e3fa;
+}
+
+tr.table_row {
+  background-color: #d8e3fa;
+}
