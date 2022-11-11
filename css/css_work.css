@@ -1,3 +1,111 @@
 section.work {
-    background-color: #e4f2fa;
-  }
+  background-color: #e4f2fa;
+}
+
+p.work_h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #3345b1;
+  text-align: center;
+  margin: 0;
+  margin-top: 2em;
+}
+
+div.work_container {
+  max-width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+div.project_container {
+  margin-top: 50px;
+  width: 100%;
+}
+
+div.project_left_hand {
+  width: 50%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+div.left_header {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2em;
+  width: 72%;
+  margin-bottom: 20px;
+}
+
+div.left_header_row {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+div.left_card {
+  min-height: 380px;
+  border-radius: 30px;
+  background-color: #f0f9ff;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.2));
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div.right_hand {
+  position: relative;
+}
+
+div.project_right_hand {
+  position: absolute;
+  min-height: 430px;
+  width: 60%;
+  border-radius: 30px;
+  z-index: 5;
+  right: 0;
+  top: 40px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 5px solid #f0f9ff;
+  background-image: url("/images/featured1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+p.project_description {
+  font-size: 1.2em;
+  color: #0f1b61;
+  width: 80%;
+}
+
+
+p.project_title {
+  font-size: 2em;
+  color: #3345b1;
+  font-weight: bold;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+span.card_technologies {
+  font-size: 1.5em;
+  color: #3345b1;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+div.github_link {
+  background-color: #0f1b61;
+  width: 50px;
+  height: 50px;
+}

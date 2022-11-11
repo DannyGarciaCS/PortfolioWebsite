@@ -1,4 +1,13 @@
 section.contact {
-    height: calc(100% + 8em);
-    background-color: #cddaf7;
-  }
+  height: calc(100% + 8em);
+  background-color: #cddaf7;
+}
+
+p.contact_h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #3345b1;
+  text-align: center;
+  margin: 0;
+  padding-top: 2em;
+}
