@@ -207,28 +207,42 @@
             <p class="work_h1">Some Personal Projects I've Built</p>
 
             <div class="work_container">
-                <div class="project_container">
+                <div class="work_rows">
 
-                    <div class="right_hand">
-                        <div class="project_right_hand">
-                        </div>
-                    </div>
 
-                    <div class="project_left_hand">
 
-                        <div class="left_header">
-                            <div class="left_header_row">
-                                <p class="project_title">Project No.1</p>
-                                <div class="github_link"></div>
+                    <div class="project_container">
+
+                        <div class="right_hand">
+                            <div class="project_right_hand">
                             </div>
                         </div>
 
-                        <div class="left_card">
-                            <p class="project_description">Project Description Bla Bla Bla Project Description Bla Bla Bla Project Description Bla Bla Bla Project Description Bla Bla Bla Project Description Bla Bla Bla Project Description Bla Bla Bla Project Description Bla Bla Bla Project Description Bla Bla Bla Project Description Bla Bla Bla Project Description Bla Bla Bla Project Description Bla Bla Bla Project Description Bla Bla Bla Project Description Bla Bla Bla Project Description Bla Bla Bla Project Description Bla Bla Bla Project Description Bla Bla Bla</p>
-                            <p class="project_description"><span class="card_technologies">Technologies Used:</span><br><br>Project Description Bla Bla Bla</p>
-                        </div>
+                        <div class="project_left_hand">
 
+                            <div class="left_header">
+                                <div class="left_header_row">
+                                    <p class="project_title">Boid Flock Emergent AI</p>
+                                    <a href="#">
+                                        <img class="unselectable" src="images/gh.png" width="50px" height="50px" alt="Github Link">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="left_card">            
+                                <p class="project_description">Algorithm used to simulate the realistic movement of birds, fish, and other natural flocking creatures
+                                through an emergent system (system that does not depend on its individual parts, but on their relationships to one another). The
+                                algorithm is written to work on a 2D environment and is usable on any context that satisfies that condition, such as this very website
+                                (see on the right). For details on the mechanics, see Craig Reynolds' paper called "Flocks, Herds, and Schools: A Distributed Behavioral
+                                Model" on which this work is based.</p>
+                                <p class="project_description"><span class="card_technologies">Technologies Used:</span><br><br>Javascript, HTML, CSS</p>
+                            </div>
+
+                        </div>
                     </div>
+
+                    <div style="height:80px"></div>
+
                 </div>
             </div>
         </div>
@@ -243,24 +257,30 @@
         <div>
 
             <p class="contact_h1">Get In Touch</p>
-            <p class="contact_h2">Have any questions or want to work together? Send me a mail.</p>
+            <p class="contact_h2">Have any questions? Want to work together?<br>Send me a message.</p>
 
-            <form action="https://formsubmit.co/cc894011de2f22f6d5af79dc40110a1c" method="POST">
+            <div style="display: flex; justify-content: center;">
 
-                <!-- Honeypot -->
-                <input type="text" name="_honey" style="display:none;">
+                <form action="https://formsubmit.co/cc894011de2f22f6d5af79dc40110a1c" method="POST">
 
-                <!-- Disable Captcha -->
-                <input type="hidden" name="_captcha" value="false">
+                    <!-- Honeypot -->
+                    <input type="text" name="_honey" style="display:none;">
 
-                <!-- Form redirect -->
-                <input type="hidden" name="_next" value="http://127.0.0.1:5500/contact.html">
+                    <!-- Disable Captcha -->
+                    <input type="hidden" name="_captcha" value="false">
 
-                <input placeholder="Your Name" type="text" name="Name" required>
-                <input placeholder="Your Email Address" type="email" name="Email" required>
-                <textarea placeholder="Your Message" type="text" name="Message" required></textarea>
-                <button type="submit" id="submit">SEND</button>
-            </form>
+                    <!-- Form redirect -->
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/contact.html">
+
+                    <input id="formName" class="formInput" placeholder="Your Name" type="text" name="Name" required>
+                    <input id="formEmail" class="formInput" placeholder="Your Email Address" type="email" name="Email" required>
+                    <textarea id="formMessage" class="formInput" placeholder="Your Message" type="text" name="Message" required></textarea>
+                    <button id="formSubmit" type="submit" id="submit" style="background-color: #eef8fd;">SEND</button>
+                </form>
+
+            </div>
+
+            <div style="height:100px"></div>
 
         </div>
     </section>

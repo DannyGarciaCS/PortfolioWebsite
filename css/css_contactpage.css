@@ -14,30 +14,30 @@ div.ty_col {
 
 p.ty_h1 {
   font-family: Cabin, Epilogue, Oxygen, Arial, Helvetica, sans-serif;
-  font-size: 6em;
+  font-size: 60px;
   color: #3345b1;
   margin: 0;
   font-weight: bold;
+  text-align: center;
 }
 
 p.ty_h2 {
   font-family: Cabin, Epilogue, Oxygen, Arial, Helvetica, sans-serif;
-  font-size: 1.4em;
-  color: #0f1b61;
+  font-size: 20px;
+  color: #3345b1;
   margin: 0;
   text-align: center;
   margin-bottom: 1.0em;
 }
 
 button.ty_return {
-  width: 18em;
-  height: 3em;
+  width: 100%;
+  height: 50px;
   margin: 0 auto;
-  font-size: 1.4em;
-  border: 3px solid #3345b1;
+  font-size: 20px;
+  border: 2px solid #3345b1;
   border-radius: 0.4em;
   transition: background-color 0.2s ease-in;
-  font-weight: bold;
   color: #3345b1;
 }
 
