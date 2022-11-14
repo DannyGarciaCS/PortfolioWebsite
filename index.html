@@ -11,36 +11,38 @@
     <meta name="author" content="Danny Garcia">
 
     <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon/icon72.png">
+
     <link rel="icon" type="image/png" href="images/favicon/icon16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="images/favicon/icon32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/icon72.png" sizes="72x72">
     <link rel="icon" type="image/png" href="images/favicon/icon96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="images/favicon/icon114.png" sizes="114x114">
+    <link rel="icon" type="image/png" href="images/favicon/icon152.png" sizes="152x152">
 
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/icon72.png" >
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/icon114.png" >
-    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/icon152.png" >
+    <link rel="apple-touch-icon" href="images/favicon/icon72.png" sizes="72x72">
+    <link rel="apple-touch-icon" href="images/favicon/icon114.png" sizes="114x114">
+    <link rel="apple-touch-icon" href="images/favicon/icon152.png" sizes="152x152">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/css_intro.css">
     <link rel="stylesheet" href="css/css_main.css">
-    <link rel="stylesheet" href="css/css_navigation.css">
-    <link rel="stylesheet" href="css/css_home.css">
-    <link rel="stylesheet" href="css/css_about.css">
-    <link rel="stylesheet" href="css/css_work.css">
-    <link rel="stylesheet" href="css/css_contact.css">
+    <link rel="stylesheet" href="css/css_index.css">
     
 </head>
+<body style="background-color:#5f73e7;">
 
-<body>
+    <!-- Website's border -->
+    <div class="border"></div>
 
     <!-- Intro transition -->
-    <div class="intro_transition">
+    <div id="intro_transition">
 
         <!-- Cabin font welcome svg -->
         <svg class="welcome" width="613" height="125" viewBox="0 0 613 125" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0;">
             <mask id="path-1-outside-1_2_2" maskUnits="userSpaceOnUse" x="-0.109955" y="0.5" width="613" height="124" fill="black">
             <rect fill="white" x="-0.109955" y="0.5" width="613" height="124"/>
             <path d="M36.59 118L6.89005 13H21.89L44.09 99.55L69.74 15.1H84.74L110.39 99.55L132.59 13H147.59L117.89 118H102.74L77.24 33.55L51.74 118H36.59Z"/>
-            <path d="M186.774 119.5C178.124 119.5 170.849 117.725 164.949 114.175C159.049 110.625 154.574 105.925 151.524 100.075C148.524 94.175 147.024 87.7 147.024 80.65C147.024 73.8 148.424 67.525 151.224 61.825C154.074 56.125 158.174 51.575 163.524 48.175C168.924 44.725 175.424 43 183.024 43C189.124 43 194.549 44.225 199.299 46.675C204.099 49.075 207.849 52.6 210.549 57.25C213.299 61.85 214.674 67.45 214.674 74.05C214.674 75.1 214.624 76.25 214.524 77.5C214.474 78.7 214.324 79.95 214.074 81.25H160.824C161.474 88.05 163.099 93.35 165.699 97.15C168.299 100.95 171.574 103.625 175.524 105.175C179.474 106.725 183.774 107.5 188.424 107.5C191.824 107.5 195.374 107.15 199.074 106.45C202.774 105.75 206.274 104.65 209.574 103.15L211.374 113.8C208.524 115.05 205.049 116.325 200.949 117.625C196.849 118.875 192.124 119.5 186.774 119.5ZM162.024 71.95H200.724C200.724 68.5 200.074 65.5 198.774 62.95C197.474 60.4 195.499 58.45 192.849 57.1C190.199 55.7 186.824 55 182.724 55C176.724 55 172.099 56.5 168.849 59.5C165.649 62.45 163.374 66.6 162.024 71.95Z"/>
+            <path d="M186.774 119.5C178.124 119.5 170.849 117.725 164.949 114.175C159.049 110.625 154.574 105.925 151.524 100.075C148.524 94.175 147.024 87.7147.024 80.65C147.024 73.8 148.424 67.525 151.224 61.825C154.074 56.125 158.174 51.575 163.524 48.175C168.924 44.725 175.424 43 183.024 43C189.124 43 194.549 44.225 199.299 46.675C204.099 49.075 207.849 52.6 210.549 57.25C213.299 61.85 214.674 67.45 214.674 74.05C214.674 75.1 214.624 76.25 214.524 77.5C214.474 78.7 214.324 79.95 214.074 81.25H160.824C161.474 88.05 163.099 93.35 165.699 97.15C168.299 100.95 171.574 103.625 175.524 105.175C179.474 106.725 183.774 107.5 188.424 107.5C191.824 107.5 195.374 107.15 199.074 106.45C202.774 105.75 206.274 104.65 209.574 103.15L211.374 113.8C208.524 115.05 205.049 116.325 200.949 117.625C196.849 118.875 192.124 119.5 186.774 119.5ZM162.024 71.95H200.724C200.724 68.5 200.074 65.5 198.774 62.95C197.474 60.4 195.499 58.45 192.849 57.1C190.199 55.7 186.824 55 182.724 55C176.724 55 172.099 56.5 168.849 59.5C165.649 62.45 163.374 66.6 162.024 71.95Z"/>
             <path d="M247.182 119.5C242.432 119.5 238.657 118.65 235.857 116.95C233.107 115.2 231.132 112.975 229.932 110.275C228.732 107.575 228.132 104.75 228.132 101.8V5.5H241.632V94C241.632 98.2 241.907 101.35 242.457 103.45C243.007 105.55 244.107 106.95 245.757 107.65C247.457 108.35 250.032 108.7 253.482 108.7L251.532 119.5H247.182Z"/>
             <path d="M296.749 119.5C288.449 119.5 281.474 117.825 275.824 114.475C270.224 111.075 265.974 106.525 263.074 100.825C260.224 95.075 258.799 88.7 258.799 81.7C258.799 74.4 260.174 67.825 262.924 61.975C265.724 56.125 269.999 51.5 275.749 48.1C281.499 44.7 288.849 43 297.799 43C301.649 43 305.274 43.4 308.674 44.2C312.124 44.95 315.199 46 317.899 47.35L315.799 59.2C313.049 57.9 310.124 56.875 307.024 56.125C303.974 55.375 300.799 55 297.499 55C289.399 55 283.224 57.3 278.974 61.9C274.724 66.5 272.599 72.9 272.599 81.1C272.599 89.1 274.624 95.525 278.674 100.375C282.724 105.225 288.899 107.65 297.199 107.65C300.599 107.65 303.849 107.25 306.949 106.45C310.099 105.65 313.099 104.55 315.949 103.15L317.749 113.95C315.749 115.35 312.824 116.625 308.974 117.775C305.124 118.925 301.049 119.5 296.749 119.5Z"/>
             <path d="M362.188 119.5C354.488 119.5 347.913 117.8 342.463 114.4C337.063 110.95 332.913 106.35 330.013 100.6C327.163 94.8 325.738 88.35 325.738 81.25C325.738 74.15 327.163 67.725 330.013 61.975C332.913 56.175 337.063 51.575 342.463 48.175C347.913 44.725 354.488 43 362.188 43C369.838 43 376.388 44.725 381.839 48.175C387.289 51.575 391.438 56.175 394.288 61.975C397.188 67.725 398.638 74.15 398.638 81.25C398.638 88.35 397.188 94.8 394.288 100.6C391.438 106.35 387.289 110.95 381.839 114.4C376.388 117.8 369.838 119.5 362.188 119.5ZM362.188 107.5C369.488 107.5 375.088 105.2 378.988 100.6C382.888 95.95 384.839 89.5 384.839 81.25C384.839 73 382.888 66.575 378.988 61.975C375.088 57.325 369.488 55 362.188 55C354.938 55 349.338 57.325 345.388 61.975C341.488 66.575 339.538 73 339.538 81.25C339.538 89.5 341.488 95.95 345.388 100.6C349.338 105.2 354.938 107.5 362.188 107.5Z"/>
@@ -54,243 +56,9 @@
             <path d="M362.188 119.5C354.488 119.5 347.913 117.8 342.463 114.4C337.063 110.95 332.913 106.35 330.013 100.6C327.163 94.8 325.738 88.35 325.738 81.25C325.738 74.15 327.163 67.725 330.013 61.975C332.913 56.175 337.063 51.575 342.463 48.175C347.913 44.725 354.488 43 362.188 43C369.838 43 376.388 44.725 381.839 48.175C387.289 51.575 391.438 56.175 394.288 61.975C397.188 67.725 398.638 74.15 398.638 81.25C398.638 88.35 397.188 94.8 394.288 100.6C391.438 106.35 387.289 110.95 381.839 114.4C376.388 117.8 369.838 119.5 362.188 119.5ZM362.188 107.5C369.488 107.5 375.088 105.2 378.988 100.6C382.888 95.95 384.839 89.5 384.839 81.25C384.839 73 382.888 66.575 378.988 61.975C375.088 57.325 369.488 55 362.188 55C354.938 55 349.338 57.325 345.388 61.975C341.488 66.575 339.538 73 339.538 81.25C339.538 89.5 341.488 95.95 345.388 100.6C349.338 105.2 354.938 107.5 362.188 107.5Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1_3_6)"/>
             <path d="M412.559 118V44.5H423.059L425.759 58.6L420.659 56.2C425.259 51.25 429.734 47.825 434.084 45.925C438.434 43.975 443.009 43 447.809 43C451.409 43 454.859 43.6 458.159 44.8C461.509 45.95 464.509 48 467.159 50.95C469.859 53.85 472.009 57.9 473.609 63.1L469.859 61.45C472.059 55.75 475.434 51.25 479.984 47.95C484.534 44.65 490.659 43 498.359 43C504.509 43 509.684 44.15 513.884 46.45C518.084 48.7 521.234 52.175 523.334 56.875C525.484 61.525 526.559 67.45 526.559 74.65V118H513.059V74.8C513.059 67.9 511.709 62.875 509.009 59.725C506.309 56.575 501.909 55 495.809 55C491.509 55 488.059 55.675 485.459 57.025C482.859 58.325 480.884 60.025 479.534 62.125C478.234 64.225 477.359 66.45 476.909 68.8C476.509 71.15 476.309 73.35 476.309 75.4V118H462.809V77.5C462.809 71.5 462.084 66.875 460.634 63.625C459.184 60.375 457.159 58.125 454.559 56.875C451.959 55.625 448.959 55 445.559 55C440.609 55 436.184 56.1 432.284 58.3C428.384 60.45 425.759 63.9 424.409 68.65L426.059 61.3V118H412.559Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1_3_6)"/>
             <path d="M579.352 119.5C570.702 119.5 563.427 117.725 557.527 114.175C551.627 110.625 547.152 105.925 544.102 100.075C541.102 94.175 539.602 87.7 539.602 80.65C539.602 73.8 541.002 67.525 543.802 61.825C546.652 56.125 550.752 51.575 556.102 48.175C561.502 44.725 568.002 43 575.602 43C581.702 43 587.127 44.225 591.877 46.675C596.677 49.075 600.427 52.6 603.127 57.25C605.877 61.85 607.252 67.45 607.252 74.05C607.252 75.1 607.202 76.25 607.102 77.5C607.052 78.7 606.902 79.95 606.652 81.25H553.402C554.052 88.05 555.677 93.35 558.277 97.15C560.877 100.95 564.152 103.625 568.102 105.175C572.052 106.725 576.352 107.5 581.002 107.5C584.402 107.5 587.952 107.15 591.652 106.45C595.352 105.75 598.852 104.65 602.152 103.15L603.952 113.8C601.102 115.05 597.627 116.325 593.527 117.625C589.427 118.875 584.702 119.5 579.352 119.5ZM554.602 71.95H593.302C593.302 68.5 592.652 65.5 591.352 62.95C590.052 60.4 588.077 58.45 585.427 57.1C582.777 55.7 579.402 55 575.302 55C569.302 55 564.677 56.5 561.427 59.5C558.227 62.45 555.952 66.6 554.602 71.95Z" stroke="white" stroke-width="4" mask="url(#path-1-outside-1_3_6)"/>
-            </svg>
+        </svg>
             
     </div>
-
-    <!-- Website's border -->
-    <div class="border"></div>
-
-    <!-- Website's navbar -->
-    <nav>
-        <div class="navbar">
-
-            <!-- Navbar left-hand -->
-            <a class="navbar left unselectable" href="">
-                <img class="navbar" src="images/logo.png" alt="Website logo">
-            </a>
-
-            <!-- Navbar right-hand -->
-            <ul class="navbar unselectable">
-                <li class="navbar"><a class="navbar selected right" href="#">Home</a></li>
-                <li class="navbar"><a class="navbar right" href="#">About</a></li>
-                <li class="navbar"><a class="navbar right" href="#">Work</a></li>
-                <li class="navbar"><a class="navbar right" href="#">Contact</a></li>
-
-                <li class="navbar"><a class="nav_button" href="#" >Resume</a></li>
-                <li class="navbar last"><a class="nav_button" href="https://github.com/DannyGarciaCS">GitHub</a></li>
-            </ul>
-
-        </div>
-    </nav>
-
-    
-
-    <!-- Home section -->
-    <section class="home main_container">
-
-        <!-- Main section content -->
-        <div>
-
-            <div class="threejs_row">
-                <div class="threejs_col">
-                    <div id="canvas_element"><canvas id="element"></canvas></div>
-                </div>
-            </div>
-
-            <div class="intro_row">
-                <div class="intro_col">
-                    <p class="home_h1">Hello, my name is</p>
-                    <p class="home_h2">Danny Garcia.</p>
-                    <p class="home_h3">I'm an App developer.</p>
-                    <p class="home_h4">I like making high quality apps that people love using. I also have experience with AI, automated testing, and web development.</p>
-                </div>
-            </div>
-
-            <a>⮟ SCROLL</a>
-        </div>
-        
-        <div class="transition_ltd"></div>
-
-    </section>
-
-    <!-- About me section -->
-    <section class="about main_container">
-
-        <!-- Main section content -->
-        <div>
-
-            <div class="about_container">
-                
-                <p class="about_h1">About Me</p>
-
-                <div class="about_body">
-
-                    <div class="about_body_img">
-                        <div class="about_body_img_outline"></div>
-                        <img class="portrait" src="images/portrait.png" alt="Photograph of Danny Garcia">
-                    </div>
-
-                    <div class="about_body_txt">
-                                                                                                     
-                        <p class="about_p1">Hello! My name is Danny Garcia and I'm an App developer. I fell in love with programming back in 2010 when I used a computer for the first time after moving here from Cuba. Ever since I've spent countless hours learning about different languages and technologies.</p>
-                        <p class="about_p2">On 2020, I graduated from Florida Southern College with a degree on Computer Science - AI and Machine Learning and I'm currently working for JP Morgan Chase as an automation engineer for their Android App. On my spare time, I like to work on a few personal apps and study Japanese, which I hope to make my third fluid language!</p>
-                
-                </div>
-                </div>
-
-
-                <p class="about_h2">Relevant Technologies I Use</p>
-
-            </div>
-
-            <div class="about_technologies">
-                <table class="about">
-                    <tr><td class="about_title" colspan="3">Strong Knowledge Of</td></tr>
-                    <tr class="table_row">
-                        <td class="about_td"><span class="about_pointer">▶</span> Kotlin</td>
-                        <td class="about_td" style="width:25%"><span class="about_pointer">▶</span> Java</td>
-                        <td class="about_td"><span class="about_pointer">▶</span> Android Studio</td>
-                    </tr>
-
-                    <tr class="table_row">
-                        <td class="about_td"><span class="about_pointer">▶</span> Python</td>
-                        <td class="about_td" style="width:25%"><span class="about_pointer">▶</span> HTML</td>
-                        <td class="about_td"><span class="about_pointer">▶</span> Javascript</td>
-                    </tr>
-
-                    <tr class="table_row">
-                        <td class="about_td"><span class="about_pointer">▶</span> AI / ML</td>
-                        <td class="about_td" style="width:25%"><span class="about_pointer">▶</span> CSS</td>
-                        <td class="about_td"></td>
-                    </tr>
-                    </table>
-                    
-
-            </div>
-
-            <div class="about_technologies">
-
-                <table class="about">
-
-                    <tr><td class="about_title" colspan="4">Knowledgeable On</td></tr>
-
-                    <tr class="table_row">
-                        <td class="about_td2"><span class="about_pointer">▶</span> SQL</td>
-                        <td class="about_td2"><span class="about_pointer">▶</span> Git</td>
-                        <td class="about_td2"><span class="about_pointer">▶</span> C#</td>
-                        <td class="about_td2"><span class="about_pointer">▶</span> C++</td>
-                    </tr>
-
-                    <tr class="table_row">
-                        <td class="about_td2"><span class="about_pointer">▶</span> SQL</td>
-                        <td class="about_td2"><span class="about_pointer">▶</span> Git</td>
-                        <td class="about_td2"><span class="about_pointer">▶</span> C#</td>
-                        <td class="about_td2"><span class="about_pointer">▶</span> C++</td>
-                    </tr>
-
-                </table>
-
-            </div>
-
-            <div style="height:80px"></div>
-
-        <div class="transition_dtl"></div>
-    </section>
-
-    <!-- Work information section -->
-    <section class="work main_container">
-
-        <!-- Main section content -->
-        <div>
-
-            <p class="work_h1">Some Personal Projects I've Built</p>
-
-            <div class="work_container">
-                <div class="work_rows">
-
-
-
-                    <div class="project_container">
-
-                        <div class="right_hand">
-                            <div class="project_right_hand">
-                            </div>
-                        </div>
-
-                        <div class="project_left_hand">
-
-                            <div class="left_header">
-                                <div class="left_header_row">
-                                    <p class="project_title">Boid Flock Emergent AI</p>
-                                    <a href="#">
-                                        <img class="unselectable" src="images/gh.png" width="50px" height="50px" alt="Github Link">
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="left_card">            
-                                <p class="project_description">Algorithm used to simulate the realistic movement of birds, fish, and other natural flocking creatures
-                                through an emergent system (system that does not depend on its individual parts, but on their relationships to one another). The
-                                algorithm is written to work on a 2D environment and is usable on any context that satisfies that condition, such as this very website
-                                (see on the right). For details on the mechanics, see Craig Reynolds' paper called "Flocks, Herds, and Schools: A Distributed Behavioral
-                                Model" on which this work is based.</p>
-                                <p class="project_description"><span class="card_technologies">Technologies Used:</span><br><br>Javascript, HTML, CSS</p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div style="height:80px"></div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="transition_ltd"></div>
-    </section>
-
-    <!-- Contact me section -->
-    <section class="contact">
-
-        <!-- Main section content -->
-        <div>
-
-            <p class="contact_h1">Get In Touch</p>
-            <p class="contact_h2">Have any questions? Want to work together?<br>Send me a message.</p>
-
-            <div style="display: flex; justify-content: center;">
-
-                <form action="https://formsubmit.co/cc894011de2f22f6d5af79dc40110a1c" method="POST">
-
-                    <!-- Honeypot -->
-                    <input type="text" name="_honey" style="display:none;">
-
-                    <!-- Disable Captcha -->
-                    <input type="hidden" name="_captcha" value="false">
-
-                    <!-- Form redirect -->
-                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/contact.html">
-
-                    <input id="formName" class="formInput" placeholder="Your Name" type="text" name="Name" required>
-                    <input id="formEmail" class="formInput" placeholder="Your Email Address" type="email" name="Email" required>
-                    <textarea id="formMessage" class="formInput" placeholder="Your Message" type="text" name="Message" required></textarea>
-                    <button id="formSubmit" type="submit" id="submit" style="background-color: #eef8fd;">SEND</button>
-                </form>
-
-            </div>
-
-            <div style="height:100px"></div>
-
-        </div>
-    </section>
-    
-    <!-- Javascript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="js/js_minthreejs.js"></script>
-    <script src="js/js_gltfloader.js"></script>
-    <script src="js/js_three.js" type="module"></script>
-    <script src="js/js_main.js" type="text/javascript"></script>
 
 </body>
 </html>
