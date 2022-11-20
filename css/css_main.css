@@ -46,12 +46,25 @@ a { text-decoration: none; }
 .border {
     top:0;width:100%;height:100%;position:fixed;z-index:101;box-sizing:border-box;
     -moz-box-sizing:border-box;-webkit-box-sizing:border-box;
-    border:0 solid white;
+    border: 18px solid white;
     pointer-events:none;
-    animation: grow 0.7s ease-in-out 0s forwards;
 }
-  
-@keyframes grow {
-    from { border-width: 0; }
-    to { border-width: 25px; }
+
+.main_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+div.transition_ltd {
+    width: 100%;
+    height: 125px;
+    background: linear-gradient(to right bottom, #e4f2fa 49%, #cddaf7 50%);
+}
+
+div.transition_dtl {
+    width: 100%;
+    height: 125px;
+    background: linear-gradient(to right bottom, #cddaf7 49%, #e4f2fa 50%);
 }
