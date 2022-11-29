@@ -3,14 +3,14 @@ body {
     color: #3345b1;
 }
 
-p.h1 {
+#contactH1 {
     font-size: 60px;
     margin: 0;
     font-weight: bold;
     text-align: center;
 }
 
-p.h2 {
+#contactH2 {
     font-size: 20px;
     margin: 0;
     text-align: center;

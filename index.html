@@ -25,8 +25,8 @@
     <link rel="apple-touch-icon" href="images/favicon/icon152.png" sizes="152x152">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/css_main.css">
-    <link rel="stylesheet" href="css/css_index.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
 
 </head>
 <body>
@@ -34,85 +34,51 @@
     <!-- Website's border -->
     <div class="border"></div>
 
-    <!-- Intro transition -->
-    <div id="intro_transition" class="unselectable">
-
-        <!-- Cabin font welcome svg -->
-        <div class="alignY" style="height:100%;">
-            <div id="intro_message" class="alignX">
-                <p>W</p>
-                <p>E</p>
-                <p>L</p>
-                <p>C</p>
-                <p>O</p>
-                <p>M</p>
-                <p>E</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Website's navbar -->
-    <nav>
-        <div id="navbar">
-
-            <!-- Navbar left-hand -->
-            <a class="unselectable" href="">
-                <img src="images/logo.webp" alt="Website logo">
-            </a>
-
-            <!-- Navbar right-hand -->
-            <ul class="navbar unselectable">
-                <li><a id="selected" href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Work</a></li> 
-                <li><a href="#">Contact</a></li>
-
-                <li><a class="nav_button" href="#" >Resume</a></li>
-                <li><a class="nav_button" href="https://github.com/DannyGarciaCS">GitHub</a></li>
-            </ul>
-
-        </div>
-    </nav>
-
     <!-- Home section -->
     <section id="home" class="main_container">
 
         <!-- Main section content -->
         <div>
 
-            <div class="alignX canvasX">
-                <div id="canvasY" class="alignY">
+            <div class="alignX cover">
+                <div id="canvas" class="alignY">
                     <div id="canvas_element"><canvas id="element"></canvas></div>
                 </div>
             </div>
 
-            <div class="alignX canvasX">
-                <div id="descriptionY" class="alignY">
+            <div class="alignX cover">
+                <div id="description" class="alignY">
                     <p>Hello, my name is</p>
                     <p>Danny Garcia.</p>
                     <p>I'm a Data Scientist.</p>
                     <p>I like making high quality programs that solve difficult problems.
-                    I also have experience in App and web development.</p>
+                    I also have experience building apps, web development, and visual design.</p>
                 </div>
             </div>
 
-            <a>⮟ SCROLL</a>
+            <div id="scrollY" class="cover unselectable">
+                <a id="scroll">
+                    <span id="scrollChild1" class="scrollLetter">⮟&nbsp;</span>
+                    <span id="scrollChild2" class="scrollLetter">S</span>
+                    <span id="scrollChild3" class="scrollLetter">C</span>
+                    <span id="scrollChild4" class="scrollLetter">R</span>
+                    <span id="scrollChild5" class="scrollLetter">O</span>
+                    <span id="scrollChild6" class="scrollLetter">L</span>
+                    <span id="scrollChild7" class="scrollLetter">L</span>
+                </a>
+            </div>
         </div>
 
         <div class="transition_ltd"></div>
 
     </section>
 
-
     <!-- Javascript -->
-    
     <script src="js/gsap.js"></script>
     <script src="js/minthreejs.js"></script>
     <script src="js/gltfloader.js"></script>
     <script src="js/chocobo.js"></script>
     <script src="js/main.js"></script>
-    <!--
-    -->
 
 </body>
 </html>

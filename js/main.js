@@ -15,3 +15,10 @@ function enableScroll() {
 }
 
 //disableScroll()
+
+// Erases scroll message on scroll
+window.addEventListener('scroll', function(e) {
+    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    document.getElementById("scroll").style.opacity = Math.max(0, 1-scroll / 150);
+    console.log(Math.max(0, Math.min(1, 1-scroll / 10)))
+});
