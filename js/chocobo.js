@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Scene
     const scene = new THREE.Scene();
-    const threeElement = document.getElementById("canvas_element");
+    const threeElement = document.getElementById("canvasElement");
 
     // Camera
     const camera = new THREE.PerspectiveCamera(75, threeElement.offsetWidth / threeElement.offsetHeight, 0.1, 1000);
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // Executes main loop after model loaded and increase opacity
-        document.getElementById("canvas_element").style.animationPlayState = "running";
+        document.getElementById("canvasElement").style.animationPlayState = "running";
         animate();
     });
 
