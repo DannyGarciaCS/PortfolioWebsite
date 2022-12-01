@@ -76,21 +76,15 @@
 
     </section>
 
-
-
-
-
-
     <!-- About me section -->
     <section id="about" class="main_container">
 
         <!-- Main section content -->
         <div>
-
             <div>
 
                 <!-- Main about section -->
-                <p id="aboutH1">About Me</p>
+                <p class="sectionHeader">About Me</p>
                 <div id="aboutBody">
 
                     <!-- About portrait image -->
@@ -106,7 +100,7 @@
                     <!-- About description -->
                     <div id="aboutDescription">
                         <p id="aboutP1">Hello! My name is Danny Garcia and I'm an App developer. I fell in love with programming back in 2010 when I used a
-                        computer for the first time after moving here from Cuba. Ever since I've spent countless hours learning about different languages and
+                        computer for the first time after moving here from Cuba. Ever since, I've spent countless hours learning about different languages and
                         technologies.</p>
                         <p id="aboutP2">On 2020, I graduated from Florida Southern College with a degree on Computer Science - AI and Machine Learning and
                         I'm currently working for JP Morgan Chase as an automation engineer. On my spare time, I like to work on a few personal apps and
@@ -119,14 +113,16 @@
 
             </div>
 
+            <!-- Table of strong knowledge -->
             <div class="usedTechnologies">
 
+                <!-- Frontal logos -->
                 <img id="pythonLogo" class="frontalLogo unselectable" src="images/pythonLogo.webp" class="unselectable">
                 <img id="javaLogo" class="frontalLogo unselectable" src="images/javaLogo.webp" class="unselectable">
 
+                <!-- Rear logos -->
                 <img id="javascriptLogo" class="rearLogo unselectable" src="images/javascriptLogo.webp" class="unselectable">
                 <img id="kotlinLogo" class="rearLogo unselectable" src="images/kotlinLogo.webp" class="unselectable">
-
 
                 <table class="experienceTable">
                     <tr><td class="tableTitle" colspan="3">Strong Knowledge Of</td></tr>
@@ -145,14 +141,15 @@
 
                     <tr class="tableRow">
                         <td class="tableCol" style="width:20%">▶ Kotlin</td>
-                        <td class="tableCol" style="width:40%">▶ Android Development</td>
-                        <td class="tableCol" style="width:20%"></td>
+                        <td class="tableCol" colspan="3">▶ Android Development</td>
                     </tr>
                     </table>
             </div>
 
+            <!-- Table separation -->
             <div style="height:20px"></div>
 
+            <!-- Table of strong knowledge -->
             <div class="usedTechnologies">
                 <table class="experienceTable">
                     <tr><td class="tableTitle" colspan="3">Knowledgeable On</td></tr>
@@ -173,16 +170,175 @@
 
             </div>
 
+            <!-- Footer section separation -->
             <div style="height:140px"></div>
 
+        <!-- Section transition -->
         <div class="transition_dtl"></div>
     </section>
 
+    <!-- Work information section -->
+    <section id="work" class="main_container">
+        <div>
 
+            <p class="sectionHeader">Some Personal Projects I've Built</p>
 
+            <!-- Collection of projects -->
+            <div id="workContainer">
+                <div id="workRow">
 
+                    <!-- JP visual project -->
+                    <div class="projectContainer">
 
+                        <!-- Project sample -->
+                        <div class="rightHand">
+                            <div id="jpVisual" class="rightCard">
+                            </div>
+                        </div>
 
+                        <!-- Left hand section of project -->
+                        <div class="leftHand">
+
+                            <!-- Project title and link -->
+                            <div class="leftHeader">
+                                <div class="headerRow">
+                                    <p class="projectTitle">JP Visual</p>
+                                    <a href="#">
+                                        <img class="unselectable" src="images/gh.webp" width="45px" alt="Github Link">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Project description -->
+                            <div class="leftCard">
+                                <p class="projectDescription">JP Visual is a program that translates Japanese from any given image. The program uses an object
+                                detection algorithm to locate potential letters and translate them using Google Translate's python API. Knowing the input
+                                language cuts down on the potential mis-identifications and improves performance over similar more generic algorithms. This is
+                                a work in progress and can currently only identify Hiragana. I'm working on implementing Katakana and Kanjis, as well as an
+                                app that uses the algorithm.
+                                </p>
+                                <p class="projectDescription"><span class="cardTechnologies">Technologies Used:</span><br><br>Python, Temp, Temp</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Boids project -->
+                    <div class="projectContainer">
+
+                        <!-- Project sample -->
+                        <div class="rightHand">
+                            <div id="boidsCard" class="rightCard">
+                            </div>
+                        </div>
+
+                        <!-- Left hand section of project -->
+                        <div class="leftHand">
+
+                            <!-- Project title and link -->
+                            <div class="leftHeader">
+                                <div class="headerRow">
+                                    <p class="projectTitle">Boid Flock Emergent AI</p>
+                                    <a href="#">
+                                        <img class="unselectable" src="images/gh.webp" width="45px" alt="Github Link">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Project description -->
+                            <div class="leftCard">
+                                <p class="projectDescription">Algorithm used to simulate the realistic movement of birds, fish, and other natural flocking creatures
+                                through an emergent system (system that does not depend on its individual parts, but on their relationships to one another). The
+                                algorithm is written to work on a 2D environment and is usable on any context that satisfies that condition, such as this very website
+                                (see simplified example on the right). For details on the mechanics, see Craig Reynolds' paper called "Flocks, Herds, and Schools: A Distributed Behavioral
+                                Model" on which this work is based.</p>
+                                <p class="projectDescription"><span class="cardTechnologies">Technologies Used:</span><br><br>Javascript, HTML, CSS</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Sim Evo project -->
+                    <div class="projectContainer">
+
+                        <!-- Project sample -->
+                        <div class="rightHand">
+                            <div id="simEvo" class="rightCard">
+                            </div>
+                        </div>
+
+                        <!-- Left hand section of project -->
+                        <div class="leftHand">
+
+                            <!-- Project title and link -->
+                            <div class="leftHeader">
+                                <div class="headerRow">
+                                    <p class="projectTitle">Sim Evo</p>
+                                    <a href="#">
+                                        <img class="unselectable" src="images/gh.webp" width="45px" alt="Github Link">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Project description -->
+                            <div class="leftCard">
+                                <p class="projectDescription">Sim Evo simulates the evolutionary process in a 3D environment in which there are predators and
+                                pray. Members of each group are randomly generated with genetic differences that affect their ability to survive. With time,
+                                natural selection breeds new characteristics into the gene pool while removing ineffective ones. Over a long period of time,
+                                pray evolves *** and ***, while predators become *** and ***. For details on the implementation or statistics, please visit
+                                the GitHub link.
+                                </p>
+                                <p class="projectDescription"><span class="cardTechnologies">Technologies Used:</span><br><br>Java, OpenGL</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Market screener project -->
+                    <div class="projectContainer">
+
+                        <!-- Project sample -->
+                        <div class="rightHand">
+                            <div id="marketScreener" class="rightCard">
+                            </div>
+                        </div>
+
+                        <!-- Left hand section of project -->
+                        <div class="leftHand">
+
+                            <!-- Project title and link -->
+                            <div class="leftHeader">
+                                <div class="headerRow">
+                                    <p class="projectTitle">Market Screener</p>
+                                    <a href="#">
+                                        <img class="unselectable" src="images/gh.webp" width="45px" alt="Github Link">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Project description -->
+                            <div class="leftCard">
+                                <p class="projectDescription">Market Screener is a program that fetches and displays real-time market data along with a
+                                multitude of customizable analysis metrics. Furthermore, Market Screener has an inbuilt algorithm that predicts future market
+                                movements. Said algorithm uses price variations across different sectors to estimate changes in real time with statistically
+                                significant accuracy (30% - 80% depending on ticker and market volatility).
+                                </p>
+                                <p class="projectDescription"><span class="cardTechnologies">Technologies Used:</span><br><br>Python, Temp, Temp</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Footer section separation -->
+                    <div style="height:100px"></div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Section transition -->
+        <div class="transition_ltd"></div>
+    </section>
 
 
     <!-- Javascript -->
