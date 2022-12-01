@@ -1,4 +1,75 @@
-/* Home section */
+/* Navbar section ********************************************************************************************************************************************/
+nav {
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    background-color: white;
+  }
+
+#navbar {
+    max-width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#leftNav {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+#siteLogo {
+    max-height: 2.5em;
+    width: auto;
+    margin-right: 0.5em;
+    margin: 0.5em;
+  }
+
+#headerTable {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.headerRow {
+    display: flex;
+    align-items: center;
+    padding-left: 1.2em;
+}
+
+.rightNav {
+    font-size: 0.9em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #0f1b61;
+}
+
+.rightNav:hover { font-weight: bold; }
+
+.selected {
+    color: #5f73e7 !important;
+    font-weight: bold;
+}
+
+.navButton {
+    font-size: 0.9em;
+    padding: 0.5em;
+    border-radius: 0.4em;
+    color: #5f73e7;
+    border: 2px solid #5f73e7;
+    transition: background-color 0.2s ease-in;
+    font-weight: bold;
+}
+
+.navButton:hover {
+    transition: background-color 0.2s ease-in;
+    background-color: #e8dcf8;
+}
+
+/* Home section ********************************************************************************************************************************************/
 #home {
     height: calc(100% + 125px);
     background-color: #e4f2fa;
@@ -104,7 +175,7 @@
     100% { color: #3345b1; margin-top: 20px;}
 }
 
-/* About section */
+/* About section ********************************************************************************************************************************************/
 #about { background-color: #cddaf7; }
 
 .sectionHeader {
@@ -298,7 +369,7 @@
 
 .tableColShort::first-letter { color:#3345b1; }
 
-/* Work section */
+/* Work section ********************************************************************************************************************************************/
 #work { background-color: #e4f2fa; }
 
 #workContainer {
@@ -408,10 +479,10 @@
     margin-bottom: 12px;
 }
 
-
+/* Contact section ********************************************************************************************************************************************/
 #contact {
     background-color: #cddaf7;
-    min-height: 910px;
+    min-height: 850px;
 }
 
 #contactSubheader {

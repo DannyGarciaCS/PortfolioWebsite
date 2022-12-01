@@ -1,25 +1,64 @@
-// Disables scrolling
-function disableScroll() {
-    window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-    window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-    window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-    window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+// Fetches nav links
+var home = document.getElementById("homeLink");
+var about = document.getElementById("aboutLink");
+var work = document.getElementById("workLink");
+var contact = document.getElementById("contactLink");
+
+// Removes selected class from tabs that have it
+function resetSelection() {
+    if(home.classList.contains("selected")) { home.classList.remove("selected"); }
+    if(about.classList.contains("selected")) { about.classList.remove("selected"); }
+    if(work.classList.contains("selected")) { work.classList.remove("selected"); }
+    if(contact.classList.contains("selected")) { contact.classList.remove("selected"); }
 }
 
-// Enables scrolling
-function enableScroll() {
-    window.removeEventListener('DOMMouseScroll', preventDefault, false);
-    window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
-    window.removeEventListener('touchmove', preventDefault, wheelOpt);
-    window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-}
-
-//disableScroll()
-
-// Erases scroll message on scroll
-var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-document.getElementById("scroll").style.opacity = Math.max(0, 1-scroll / 500);
+// Scroll behavior
 window.addEventListener('scroll', function(e) {
+
+    // Fetches scroll position and adjusts scroll message accordingly
     var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     document.getElementById("scroll").style.opacity = Math.max(0, 1-scroll / 500);
+
+    // Fetches position of sections
+    var aboutScroll = document.getElementById("home").getBoundingClientRect().height - 125 - 56;
+    var workScroll = aboutScroll + document.getElementById("about").getBoundingClientRect().height;
+    var contactScroll = workScroll + document.getElementById("work").getBoundingClientRect().height;
+
+    // Changes tab selection based on scroll position
+    if(scroll < aboutScroll) {
+        resetSelection();
+        home.classList.add("selected");
+    } else if(scroll < workScroll) {
+        resetSelection();
+        about.classList.add("selected");
+    } else if(scroll < contactScroll) {
+        resetSelection();
+        work.classList.add("selected");
+    } else {
+        resetSelection();
+        contact.classList.add("selected");
+    }
 });
+
+// Fetches scroll position and adjusts scroll message accordingly while respecting scope
+var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+document.getElementById("scroll").style.opacity = Math.max(0, 1-scroll / 500);
+
+// Code repeated to initialize while respecting scope
+var aboutScroll = document.getElementById("home").getBoundingClientRect().height - 125 - 56;
+var workScroll = aboutScroll + document.getElementById("about").getBoundingClientRect().height;
+var contactScroll = workScroll + document.getElementById("work").getBoundingClientRect().height - 125;
+
+if(scroll < aboutScroll) {
+    resetSelection();
+    home.classList.add("selected");
+} else if(scroll < workScroll) {
+    resetSelection();
+    about.classList.add("selected");
+} else if(scroll < contactScroll) {
+    resetSelection();
+    work.classList.add("selected");
+} else {
+    resetSelection();
+    contact.classList.add("selected");
+}
