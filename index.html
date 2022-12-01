@@ -340,6 +340,39 @@
         <div class="transition_ltd"></div>
     </section>
 
+    <!-- Contact me section -->
+    <section id="contact" class="main_container">
+
+        <!-- Main section content -->
+        <div>
+
+            <p class="sectionHeader">Get In Touch</p>
+            <p id="contactSubheader">Have any questions? Want to work together?<br>Send me a message.</p>
+            <div style="display: flex; justify-content: center;">
+
+                <form action="https://formsubmit.co/cc894011de2f22f6d5af79dc40110a1c" method="POST">
+
+                    <!-- Honeypot -->
+                    <input type="text" name="_honey" style="display:none;">
+
+                    <!-- Disable Captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <!-- Form redirect -->
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/contact.html">
+
+                    <input id="formName" class="formInput" placeholder="Your Name" type="text" name="Name" required>
+                    <input id="formEmail" class="formInput" placeholder="Your Email Address" type="email" name="Email" required>
+                    <textarea id="formMessage" class="formInput" placeholder="Your Message" type="text" name="Message" required></textarea>
+                    <button id="formSubmit" type="submit" id="submit" style="background-color: transparent;">SEND</button>
+                </form>
+
+            </div>
+
+            <div style="height:140px"></div>
+
+        </div>
+    </section>
 
     <!-- Javascript -->
     <script src="js/gsap.js"></script>
