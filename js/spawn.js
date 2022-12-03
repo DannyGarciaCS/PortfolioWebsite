@@ -1,6 +1,6 @@
 
 // On page load
-window.addEventListener("load", (event) => {
+document.addEventListener("DOMContentLoaded", (event) => {
 
     // When viewport intersects spwn element
     let timer = 0;

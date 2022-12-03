@@ -2,9 +2,12 @@
 // Waits for html and css to load
 document.addEventListener("DOMContentLoaded", () => {
 
-    // 3D variables initialization
-    let chocobo;
-    var mixer;
+    // Mouse movement handling
+    let mouse = {x: 0, y: 0};
+    document.addEventListener("mousemove", (event) => {
+        mouse.x = event.clientX;
+        mouse.y = event.clientY;
+    });
 
     // Loads used textures
     const loader = new THREE.TextureLoader();
@@ -24,73 +27,70 @@ document.addEventListener("DOMContentLoaded", () => {
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setClearColor(0xffffff, 0);
 
-    // Loads GLTF scene
-    const gltfLoader = new THREE.GLTFLoader();
-    gltfLoader.load("models/chocobo.glb", function(gltf){
+    let modelLoad = new Promise(function(resolve, reject) {
 
-        // Gets chocobo into the scene
-        scene.add(gltf.scene);
-        chocobo = gltf.scene;
-        chocobo.rotation.y = 2
+        try {
 
-        // Animates chocobo
-        mixer = new THREE.AnimationMixer(gltf.scene);
-        gltf.animations.forEach((clip) => {
-            mixer.clipAction(clip).play();
-        });
+            // 3D variables initialization
+            let chocobo;
+            var mixer;
 
-        // Executes main loop after model loaded and increase opacity
-        document.getElementById("canvasElement").style.animationPlayState = "running";
-        animate();
+            // Loads GLTF scene
+            const gltfLoader = new THREE.GLTFLoader();
+            gltfLoader.load("models/chocobo.glb", function(gltf){
+
+                // Gets chocobo into the scene
+                scene.add(gltf.scene);
+                chocobo = gltf.scene;
+                chocobo.rotation.y = 2
+
+                // Animates chocobo
+                mixer = new THREE.AnimationMixer(gltf.scene);
+                gltf.animations.forEach((clip) => {
+                    mixer.clipAction(clip).play();
+                });
+
+                // Executes main loop after model loaded and increase opacity
+                document.getElementById("canvasElement").style.animationPlayState = "running";
+                animate();
+
+            });
+
+            // Scene backdrop
+            const backdropMaterial = new THREE.MeshBasicMaterial({ map, transparent: true });
+            const backdrop = new THREE.Mesh(new THREE.PlaneGeometry(3, 3, 1, 1), backdropMaterial);
+            backdrop.rotation.x = 6.3;
+            backdrop.position.y = 1.0;
+            backdrop.position.z = -1;
+            scene.add(backdrop);
+
+            // Main renderer loop
+            function animate() {
+
+                // Moves backdrop based on mouse position
+                let motionVector = {x: 0, y: 0};
+                if(mouse.x != 0) { motionVector.x = (-mouse.x + (screen.width / 2)) / (screen.width * 3) ; }
+                if(mouse.y != 0) { motionVector.y = (-mouse.y + (screen.height / 2)) / (screen.width * 2) ; }
+                gsap.to(backdrop.position, { x: motionVector.x, y: 1 - motionVector.y, duration: 1 })
+
+                // Animates chocobo
+                chocobo.rotation.y -= 0.001;
+                gsap.to(chocobo.position, { x: -motionVector.x, y: -mouse.y / (window.innerWidth * 3), duration: 1 })
+                mixer.update(0.015);
+
+                // Renders frame
+                requestAnimationFrame(animate);
+                renderer.render(scene, camera);
+            }
+
+            resolve("3D models loaded successfully");
+        } catch (e) { reject(`Failed to load 3D model with error code: ${e}`); }
+
     });
 
-    const backdropMaterial = new THREE.MeshBasicMaterial({
-    map, transparent: true
-    }); const backdrop = new THREE.Mesh(new THREE.PlaneGeometry(3, 3, 1, 1), backdropMaterial);
-    let backdropY = 1.0;
-    backdrop.rotation.x = 6.3;
-    backdrop.position.y = backdropY;
-    backdrop.position.z = -1;
-    scene.add(backdrop);
-
-    // Event handling
-    document.addEventListener("mousemove", animateTerrain);
-    let mouseY = 0;
-    let mouseX = 0;
-    function animateTerrain(event) {
-        mouseY = event.clientY;
-        mouseX = event.clientX;
-    }
-
-    // Main renderer loop
-    function animate() {
-
-        // Moves backdrop based on mouse position
-        let xTarget = 0;
-        if(mouseX != 0) { xTarget = (-mouseX + (screen.width / 2)) / 6000 ; }
-        else { xTarget = 0; }
-        gsap.to(backdrop.position, {
-            x: xTarget,
-            y: backdropY + mouseY / 6000,
-            duration: 1
-        })
-
-        // Rotates chocobo
-        chocobo.rotation.y -= 0.0005;
-
-        // Moves chocobo based on mouse position
-        gsap.to(chocobo.position, {
-            x: -xTarget,
-            y: -mouseY / 6000,
-            duration: 1
-        })
-
-        // Moves chocobo's animation
-        mixer.update(0.01);
-
-        // Renders frame
-        requestAnimationFrame(animate);
-        renderer.render(scene, camera);
-
-    }
+    // Executes when promise finishes
+    modelLoad.then(
+        function(value) { console.log('%c' + value, "color: green;"); },
+        function(error) { console.log('%c' + error, "color: red;"); }
+    );
 });
