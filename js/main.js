@@ -1,3 +1,4 @@
+
 // Fetches nav links
 var home = document.getElementById("homeLink");
 var about = document.getElementById("aboutLink");
@@ -15,11 +16,8 @@ function resetSelection() {
 // Scroll behavior
 window.addEventListener('scroll', function(e) {
 
-    // Fetches scroll position and adjusts scroll message accordingly
-    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    document.getElementById("scroll").style.opacity = Math.max(0, 1-scroll / 500);
-
     // Fetches position of sections
+    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     var aboutScroll = document.getElementById("home").getBoundingClientRect().height - 125 - 56;
     var workScroll = aboutScroll + document.getElementById("about").getBoundingClientRect().height;
     var contactScroll = workScroll + document.getElementById("work").getBoundingClientRect().height;
@@ -40,11 +38,8 @@ window.addEventListener('scroll', function(e) {
     }
 });
 
-// Fetches scroll position and adjusts scroll message accordingly while respecting scope
-var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-document.getElementById("scroll").style.opacity = Math.max(0, 1-scroll / 500);
-
 // Code repeated to initialize while respecting scope
+var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 var aboutScroll = document.getElementById("home").getBoundingClientRect().height - 125 - 56;
 var workScroll = aboutScroll + document.getElementById("about").getBoundingClientRect().height;
 var contactScroll = workScroll + document.getElementById("work").getBoundingClientRect().height - 125;
@@ -62,3 +57,5 @@ if(scroll < aboutScroll) {
     resetSelection();
     contact.classList.add("selected");
 }
+
+
