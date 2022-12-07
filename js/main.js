@@ -1,4 +1,4 @@
-
+/*
 // Removes selected class from tabs that have it
 function resetSelection(home, about, work, contact) {
     if(home.classList.contains("selected")) { home.classList.remove("selected"); }
@@ -55,3 +55,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
         pickClass(home, about, work, contact);
     });
 })
+*/
