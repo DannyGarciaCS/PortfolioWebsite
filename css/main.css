@@ -91,6 +91,7 @@ div.transition_dtl {
     div.transition_dtl { height: 5vw; }
     .tableSpacer { height: 1vw; }
     .spacer { height: 8vw; }
+    .shortSpacer { height: 8vw; }
 
 }
 
@@ -101,5 +102,6 @@ div.transition_dtl {
     div.transition_dtl { height: 6vh; }
     .tableSpacer { height: 5vw; }
     .spacer { height: 15vw; }
+    .shortSpacer { height: 8vw; }
 
 }
