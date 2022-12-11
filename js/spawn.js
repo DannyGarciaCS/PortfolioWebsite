@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
                 // Play show animation on an increasing delay
                 setTimeout(function() { entry.target.classList.add("show") }, timer);
-                timer += 150;
+                timer += 100;
                 intersectionObserver.unobserve(entry.target);
-                setTimeout(function() { timer = 0; }, 1000);
+                setTimeout(function() { timer = 0; }, 800);
             }
         })
     })

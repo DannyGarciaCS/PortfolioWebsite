@@ -67,15 +67,19 @@ document.addEventListener("DOMContentLoaded", () => {
             // Main renderer loop
             function animate() {
 
-                // Moves backdrop based on mouse position
+                // Moves backdrop based on mouse position if not on portrait display
                 let motionVector = {x: 0, y: 0};
-                if(mouse.x != 0) { motionVector.x = (-mouse.x + (screen.width / 2)) / (screen.width * 3) ; }
-                if(mouse.y != 0) { motionVector.y = (-mouse.y + (screen.height / 2)) / (screen.width * 2) ; }
-                gsap.to(backdrop.position, { x: motionVector.x, y: 1 - motionVector.y, duration: 1 })
+                if(screen.width > screen.height) {
+                    if(mouse.x != 0) { motionVector.x = (-mouse.x + (screen.width / 2)) / (screen.width * 3) ; }
+                    if(mouse.y != 0) { motionVector.y = (-mouse.y + (screen.height / 2)) / (screen.width * 2) ; }
+                    gsap.to(backdrop.position, { x: motionVector.x, y: 1 - motionVector.y, duration: 1 })
+                }
 
                 // Animates chocobo
                 chocobo.rotation.y -= 0.001;
-                gsap.to(chocobo.position, { x: -motionVector.x, y: -mouse.y / (window.innerWidth * 3), duration: 1 })
+                if(screen.width > screen.height) {
+                    gsap.to(chocobo.position, { x: -motionVector.x, y: -mouse.y / (window.innerWidth * 3), duration: 1 })
+                }
                 mixer.update(0.015);
 
                 // Renders frame
