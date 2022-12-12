@@ -246,32 +246,6 @@ About me Section
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-.frontalLogo {
-    position: absolute;
-    z-index: 52;
-    height: 3.5vw;
-    width: 3.5vw;
-    opacity: 0.65;
-    padding-top: 10vw;
-    animation-duration: 5s;
-    animation-name: passiveFloat;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-.rearLogo {
-    position: absolute;
-    z-index: 52;
-    height: 3.5vw;
-    width: 3.5vw;
-    opacity: 0.2;
-    padding-top: 3vw;
-    animation-duration: 5s;
-    animation-delay: 0.75s;
-    animation-name: passiveFloat;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    transform: translateY(1.5vw);
-}
 #aboutDescription {
     display: flex;
     flex-direction: column;
@@ -307,15 +281,6 @@ About me Section
     -webkit-box-sizing: border-box;
 }
 .tableColShort::first-letter { color:#3345b1; }
-#pythonLogo { padding-right: 700px; }
-#javaLogo { padding-left: 700px; }
-#javascriptLogo { padding-right: 900px; }
-#kotlinLogo { padding-left: 900px; }
-@keyframes passiveFloat {
-    0% { transform: translateY(1.5vw); }
-    50% { transform: translateY(0px); }
-    100% { transform: translateY(1.5vw); }
-}
 
 /* Landscape resolution */
 @media screen and (orientation:landscape) {
@@ -328,64 +293,96 @@ About me Section
         font-size: 3vh;
         margin-bottom: 3vh;
     }
-    #aboutBody {
-        margin-top: 1vw;
-        margin-bottom: 1vw;
-    }
+    #aboutBody { margin: 2vh 0; }
     #aboutPortrait {
-        height: 15.63vw;
-        width: 15.63vw;
+        height: 30vh;
+        width: 30vh;
     }
     #portraitOutline {
-        width: 13vw;
-        height: 13vw;
-        margin-top: 1.3vw;
-        margin-left: 1.4vw;
-        border-radius: 1.2vw;
-        border: 0.2vw solid white;
+        width: 25vh;
+        height: 25vh;
+        margin-top: 2.5vh;
+        margin-left: 2.5vh;
+        border-radius: 2vh;
+        border: 0.4vh solid white;
     }
     #portrait {
-        width: 13vw;
-        height: 13vw;
-        margin-left: 0.5vw;
-        margin-top: 0.5vw;
-        border-radius: 1.2vw;
-        border: 0.2vw solid white;
+        width: 25vh;
+        height: 25vh;
+        margin-left: 1vh;
+        margin-top: 1vh;
+        border-radius: 2vh;
+        border: 0.4vh solid white;
     }
     #portraitOverlay {
-        width: 13vw;
-        height: 13vw;
-        margin-left: 0.5vw;
-        margin-top: 0.5vw;
-        border-radius: 1.2vw;
-        border: 0.2vw solid white;
+        width: 25vh;
+        height: 25vh;
+        margin-left: 1vh;
+        margin-top: 1vh;
+        border-radius: 2vh;
+        border: 0.4vh solid white;
     }
     #star {
-        margin-left: -1.3vw;
-        margin-top: -1.4vw;
-        width: 4vw;
+        margin-left: -2.5vh;
+        margin-top: -3vh;
+        width: 8vh;
     }
     #aboutDescription {
-        padding: 0 3vw;
-        font-size: 1vw;
-        width: 27vw;
+        padding: 0 6vh;
+        font-size: 1.8vh;
+        width: 45vh;
     }
-    #aboutP1 { margin-bottom: 1.5vw; }
-    .experienceTable { font-size: 18px; }
+    #aboutP1 { margin-bottom: 2vh; }
+    .experienceTable { font-size: 1.8vh; }
     .tableTitle {
-        height: 1.7em;
-        font-size: 1.2em;
-        border: 4px solid #d8e3fa;
+        height: 5vh;
+        font-size: 2.5vh;
+        border: 0.5vh solid #d8e3fa;
     }
     .tableCol {
-        width: 250px;
-        height: 40px;
-        border: 4px solid #d8e3fa;
+        width: 25vh;
+        height: 4.5vh;
+        border: 0.5vh solid #d8e3fa;
     }
     .tableColShort {
-        width: 150px;
-        height: 40px;
-        border: 4px solid #d8e3fa;
+        width: 25vh;
+        height: 4.5vh;
+        border: 0.5vh solid #d8e3fa;
+    }
+    .frontalLogo {
+        position: absolute;
+        z-index: 52;
+        height: 6.5vh;
+        width: 6.5vh;
+        opacity: 0.65;
+        padding-top: 20vh;
+        animation-duration: 5s;
+        animation-name: passiveFloat;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+    .rearLogo {
+        position: absolute;
+        z-index: 52;
+        height: 6.5vh;
+        width: 6.5vh;
+        opacity: 0.2;
+        padding-top: 6vh;
+        animation-duration: 5s;
+        animation-delay: 0.75s;
+        animation-name: passiveFloat;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        transform: translateY(3vh);
+    }
+    #pythonLogo { padding-right: 70vh; }
+    #javaLogo { padding-left: 70vh; }
+    #javascriptLogo { padding-right: 90vh; }
+    #kotlinLogo { padding-left: 90vh; }
+    @keyframes passiveFloat {
+        0% { transform: translateY(3vh); }
+        50% { transform: translateY(0px); }
+        100% { transform: translateY(3vh); }
     }
 
 }
@@ -532,40 +529,41 @@ Work Section
 
     #workContainer { max-width: 70%; }
     .projectContainer {
-        margin-top: 50px;
+        margin-top: 4.5vh;
         width: 100%;
     }
     .rightCard {
-        min-height: 400px;
+        min-height: 38vh;
         width: 55%;
-        border-radius: 10px;
-        top: 30px;
-        border: 3px solid #f0f9ff;
+        border-radius: 1.5vh;
+        top: 3vh;
+        border: 0.4vh solid #f0f9ff;
     }
     .leftHand {
         width: 50%;
-        min-height: 500px;
+        min-height: 38vh;
     }
     .leftHeader {
-        padding-left: 30px;
+        padding-left: 3vh;
         width: 80%;
-        margin: 20px 0;
+        margin: 2vh 0;
     }
-    .projectTitle { font-size: 30px; }
+    .projectTitle { font-size: 3vh; }
+    .githubProject {
+        width: 5vh;
+        height: 5vh;
+    }
     .leftCard {
-        min-height: 335px;
-      border-radius: 10px;
-      filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.2));
-      padding: 20px 40px;
+        min-height: 33vh;
+        border-radius: 1.5vh;
+        filter: drop-shadow(0 0 1vh rgba(0, 0, 0, 0.2));
+        padding: 1.5vh 4vh;
     }
     .projectDescription {
-        font-size: 18px;
+        font-size: 1.8vh;
         width: 90%;
     }
-    .cardTechnologies {
-        font-size: 25px;
-        margin-bottom: 12px;
-    }
+    .cardTechnologies { font-size: 2.5vh; }
 
 }
 
@@ -650,37 +648,35 @@ form {
 
     #contact { min-height: 850px; }
     #contactSubheader {
-        font-size: 20px;
-        margin-top: 10px;
+        font-size: 2.5vh;
+        margin: 2vh 0;
     }
     .formInput {
-        font-size: 20px;
-        border-radius: 4px;
-        padding: 2px 10px;
+        font-size: 1.8vh;
+        border-radius: 0.8vh;
+        padding: 1.5vh 2vh;
     }
     #formName {
-        width: 500px;
-        height: 30px;
-        margin-top: 20px;
-        margin-bottom: 5px;
+        width: 60vh;
+        margin: 0.5vh 0;
     }
     #formEmail {
-        width: 500px;
-        height: 30px;
-        margin: 5px 0px;
+        width: 60vh;
+        margin: 0.5vh 0;
     }
     #formMessage {
-        height: 350px;
-        margin: 5px 0px;
-        width: 500px;
+        width: 60vh;
+        height: 40vh;
+        margin: 0.5vh 0;
+        resize: none;
     }
     #formSubmit {
         width: 100%;
-        height: 40px;
-        margin: 15px auto;
-        font-size: 19px;
-        border: 2px solid #3345b1;
-        border-radius: 0.4em;
+        height: 5vh;
+        margin: 2vh auto;
+        font-size: 1.8vh;
+        border: 0.3vh solid #3345b1;
+        border-radius: 1vh;
     }
     #portraitBreak { display: none; }
 
