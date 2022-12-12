@@ -579,18 +579,18 @@ Work Section
         min-height: 40vw;
         width: 100%;
         border-radius: 3vw 3vw 0 0;
-        top: 11vw;
+        top: 10vw;
         border: 0.5vw solid #f0f9ff;
     }
     .leftHand {
-        margin-top: 51vw;
+        margin-top: 38vw;
         width: 100%;
     }
     .leftHeader {
-        top: 0px;
+        top: -39vw;
         width: 90%;
         margin: 2vw 0;
-        position: absolute;
+        position: relative;
     }
     .projectTitle { font-size: 4vw; }
     .githubProject {
