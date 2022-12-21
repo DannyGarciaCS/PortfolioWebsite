@@ -482,11 +482,7 @@ Work Section
     position: absolute;
     z-index: 5;
     right: 0;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
-#boidsCard { background-color: blue; }
 #jpVisual { background-color: green; }
 #marketScreener { background-color: pink; }
 #simEvo { background-color: purple; }
@@ -535,9 +531,7 @@ Work Section
     .rightCard {
         min-height: 38vh;
         width: 55%;
-        border-radius: 1.5vh;
         top: 3vh;
-        border: 0.4vh solid #f0f9ff;
     }
     .leftHand {
         width: 50%;
@@ -578,9 +572,7 @@ Work Section
     .rightCard {
         min-height: 40vw;
         width: 100%;
-        border-radius: 3vw 3vw 0 0;
         top: 10vw;
-        border: 0.5vw solid #f0f9ff;
     }
     .leftHand {
         margin-top: 38vw;
