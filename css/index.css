@@ -486,7 +486,11 @@ Work Section
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
-#boidsCard { background-color: blue; }
+#boidsCard {
+    background-image: url("../images/boids.gif");
+    background-repeat: repeat;
+    background-size: cover;
+}
 #jpVisual { background-color: green; }
 #marketScreener { background-color: pink; }
 #simEvo { background-color: purple; }
