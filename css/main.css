@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Oxygen");
 @import url("https://fonts.googleapis.com/css?family=Cabin");
 
@@ -8,15 +8,33 @@ body, html {
     height: 100%;
 }
 
+/*
+body {
+    overflow-x: hidden;
+}
+*/
+
 * {
     scrollbar-width: none;
     scrollbar-color: #5f73e7 #f6fcff;
 }
 
-*::-webkit-scrollbar-track { background: #f6fcff; }
-*::-webkit-scrollbar-thumb { background-color: #5f73e7; }
-*::selection { background: #a9b4f1; }
-*::-moz-selection { background: #a9b4f1; }
+*::-webkit-scrollbar-track {
+    background: #f6fcff;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #5f73e7;
+}
+
+*::selection {
+    background: #a9b4f1;
+    text-shadow: none;
+}
+
+*::-moz-selection {
+    background: #a9b4f1;
+    text-shadow: none;
+}
 
 a { text-decoration: none; }
 
@@ -80,26 +98,68 @@ div.transition_dtl {
     transition: opacity ease-in 0.5s;
 }
 
+.sectionHeader {
+    font-weight: 650;
+    color: #3345b1;
+    text-align: center;
+    margin: 0;
+}
+
 /* Landscape resolution */
 @media screen and (orientation:landscape) {
 
-    *::-webkit-scrollbar { width: 1vh; }
-    div.transition_ltd { height: 5vw; }
-    div.transition_dtl { height: 5vw; }
-    .tableSpacer { height: 1vw; }
-    .spacer { height: 8vw; }
-    .shortSpacer { height: 8vw; }
+    *::-webkit-scrollbar {
+        width: 1.25vh;
+        height: 1.25vh;
+    }
+    div.transition_ltd {
+        height: 5vw;
+    }
+    div.transition_dtl {
+        height: 5vw;
+    }
+    .tableSpacer {
+        height: 3vw;
+    }
+    .spacer {
+        height: 8vw;
+    }
+    .shortSpacer {
+        height: 8vw;
+    }
+    .sectionHeader {
+        font-size: 5vh;
+        margin-top: 13vh;
+    }
 
 }
 
 /* Portrait resolution */
 @media screen and (orientation:portrait) {
 
-    *::-webkit-scrollbar { width: 1.2vw; }
-    div.transition_ltd { height: 6vh; }
-    div.transition_dtl { height: 6vh; }
-    .tableSpacer { height: 5vw; }
-    .spacer { height: 15vw; }
-    .shortSpacer { height: 8vw; }
+    *::-webkit-scrollbar {
+        width: 1.8vw;
+    }
+    div.transition_ltd {
+        height: 6vh;
+    }
+    div.transition_dtl {
+        height: 6vh;
+    }
+    .tableSpacer {
+        height: 5vw;
+    }
+    .spacer {
+        height: 15vw;
+    }
+    .shortSpacer {
+        height: 8vw;
+    }
+    .sectionHeader {
+        font-size: 6vw;
+        margin: auto;
+        margin-top: 15vw;
+        max-width: 80vw;
+    }
 
 }
