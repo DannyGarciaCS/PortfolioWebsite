@@ -4,6 +4,7 @@ nav {
     width: 100vw;
     position: fixed;
     background-color: white;
+    font-family: 'Roboto Mono', monospace;
 }
 #navbar {
     margin: auto;
@@ -350,7 +351,7 @@ nav {
     }
     .tableBuffer {
         border-radius: 4vh;
-        padding: 3vh 2vh;
+        padding: 3vh 1vh;
         width: 65vh;
         box-shadow: 0 1vh 2vh #3346b181;
         transform: perspective(1100px) rotateX(20deg);
@@ -471,6 +472,279 @@ nav {
     #javaLogo { display: none; }
     #javascriptLogo { display: none; }
     #kotlinLogo { display: none; }
+
+}
+
+/* Work Section __________________________________________________________________________________________________*/
+#work {
+    background-color: #e4f2fa;
+}
+#workContainer {
+    margin: auto;
+}
+#workRow {
+    display: flex;
+    flex-direction: column;
+}
+.projectHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.projectTitle {
+    font-weight: 600;
+    color: #3345b1;
+}
+.projectDetails {
+    align-items: center;
+}
+.projectPreview {
+    background-color: #cddaf7;
+    box-shadow: 0 0 2vh #3346b17c;
+}
+#jpTrainerPreview {
+    background-image: url("../visuals/jpTrainerPreview.gif");
+    background-size: cover;
+    transform: perspective(700px) rotateX(20deg);
+}
+#boidFlockPreview {
+    background-image: url("../visuals/boidFlockPreview.gif");
+    background-size: cover;
+    transform: perspective(700px) rotateX(20deg);
+}
+#evolutionarySimPreview {
+    background-image: url("../visuals/evolutionarySimPreview.gif");
+    background-size: cover;
+    transform: perspective(700px) rotateX(20deg);
+}
+.projectDescriptionBox {
+    background-color: white;
+    z-index: 10;
+}
+.projectDescription {
+    color:  #0f1b61;
+}
+.projectTechnologies {
+    margin: auto;
+    background-color: white;
+    text-align: center;
+}
+.projectTechnologiesHeader {
+    font-weight: 500;
+    color: #3345b1;
+}
+.projectTechnologiesBody {
+    color:  #0f1b61;
+    margin: 0;
+}
+.subprojectTitle {
+    margin-top: 6vh;
+    font-size: 4vh;
+    font-weight: 600;
+    color: #3345b1;
+}
+.subproject {
+    background-color: white;
+    box-shadow: 0 0 2vh #3346b17c;
+    border-radius: 2vh;
+    padding: 3vh;
+    margin-bottom: 3vh;
+}
+.subprojectName {
+    font-size: 3vh;
+    font-weight: 500;
+    color: #3345b1;
+    margin: 0;
+    margin-bottom: 2vh;
+}
+.subprojectDescription {
+    font-size: 2vh;
+    color: #0f1b61;
+    margin: 0;
+}
+
+/* Landscape resolution */
+@media screen and (orientation:landscape) {
+
+    #workContainer {
+        width: 95vh;
+    }
+    .projectContainer {
+        margin-top: 4.5vh;
+        width: 100%;
+    }
+    .githubLink {
+        width: 5vh;
+        height: 5vh;
+    }
+    .projectTitle {
+        font-size: 4vh;
+        margin-bottom: 3vh;
+    }
+    .projectDetails {
+        display: flex;
+        justify-content: space-between;
+    }
+    .projectHeader {
+        margin-top: 5vh;
+        margin-bottom: 1vh;
+        height: 7vh;
+        padding: 0 4vh;
+    }
+    .projectPreview {
+        width: 55%;
+        height: 38vh;
+        border-radius: 2vh 0 0 2vh;
+        box-shadow: 0 0 2vh #3346b17c;
+    }
+    #jpTrainerPreview {
+        margin-left: 5vh;
+        margin-top: 5.5vh;
+        position: absolute;
+        width: 42vh;
+        height: 25vh;
+        transition: margin-left 0.2s ease-in;
+    }
+    #boidFlockPreview {
+        margin-left: 5vh;
+        margin-top: 5.5vh;
+        position: absolute;
+        width: 42vh;
+        height: 25vh;
+        transition: margin-left 0.2s ease-in;
+    }
+    #evolutionarySimPreview {
+        margin-left: 5vh;
+        margin-top: 5.5vh;
+        position: absolute;
+        width: 42vh;
+        height: 25vh;
+        transition: margin-left 0.2s ease-in;
+    }
+    .projectPreview:hover #jpTrainerPreview {
+        margin-left: 8vh !important;
+        transition: margin-left 0.2s ease-in;
+    }
+    .projectPreview:hover #boidFlockPreview {
+        margin-left: 8vh !important;
+        transition: margin-left 0.2s ease-in;
+    }
+    .projectPreview:hover #evolutionarySimPreview {
+        margin-left: 8vh !important;
+        transition: margin-left 0.2s ease-in;
+    }
+    .projectDescriptionBox {
+        border-radius: 0 0 2vh 0;
+        box-shadow: 0 0 2vh #3346b17c;
+        width: 45%;
+        height: 38vh;
+        transform: skew(-10deg);
+        transform-origin:top;
+    }
+    .projectDescription {
+        font-size: 2vh;
+        padding: 1.5vh 3vh;
+    }
+    .projectTechnologies {
+        border-radius: 2vh;
+        box-shadow: 0 0 2vh #3346b17c;
+        padding: 2vh;
+        position: relative;
+        z-index: 1100;
+        margin-top: -3vh;
+        margin-right: 40vh;
+        width: 45%;
+        transform: skew(-10deg);
+        transform-origin:top;
+    }
+    .projectTechnologiesHeader {
+        font-size: 3vh;
+        margin-bottom: 1vh;
+        margin-top: 0;
+    }
+    .projectTechnologiesBody {
+        font-size: 2vh;
+    }
+
+}
+
+/* Portrait resolution */
+@media screen and (orientation:portrait) {
+
+    #workContainer {
+        width: 85vw;
+    }
+    .projectContainer {
+        margin-top: 5vw;
+        width: 100%;
+    }
+    .githubLink {
+        width: 6.5vw;
+        height: 6.5vw;
+    }
+    .projectTitle {
+        font-size: 5vw;
+        margin-bottom: 5vw;
+    }
+    .projectHeader {
+        margin-top: 7vw;
+        margin-bottom: 2vw;
+        height: 8vw;
+        padding: 0 4vw;
+    }
+
+    .projectPreview {
+        width: 100%;
+        height: 50vw;
+        border-radius: 3vw 3vw 0 0;
+        box-shadow: 0 0 3vw #3346b17c;
+        display: flex;
+        align-items: center;
+    }
+    #jpTrainerPreview {
+        margin-left: 10.5vw !important;
+        z-index: 10;
+        width: 63vw;
+        height: 37.5vw;
+    }
+    #boidFlockPreview {
+        margin-left: 10.5vw !important;
+        z-index: 10;
+        width: 63vw;
+        height: 37.5vw;
+    }
+    #evolutionarySimPreview {
+        margin-left: 10.5vw !important;
+        z-index: 10;
+        width: 63vw;
+        height: 37.5vw;
+    }
+    .projectDescriptionBox {
+        border-radius: 0 0 3vw 3vw;
+        box-shadow: 0 0 3vw #3346b17c;
+        width: 100%;
+        position: relative;
+        z-index: 100;
+    }
+    .projectDescription {
+        font-size: 3vw;
+        padding: 4vw 4vw;
+        margin: 0;
+    }
+    .projectTechnologies {
+        margin-top: 2vw;
+        border-radius: 3vw;
+        box-shadow: 0 0 3vw #3346b17c;
+        padding: 3vw;
+    }
+    .projectTechnologiesHeader {
+        font-size: 5vw;
+        margin-bottom: 2vw;
+        margin-top: 0;
+    }
+    .projectTechnologiesBody {
+        font-size: 3vw;
+    }
 
 }
 
