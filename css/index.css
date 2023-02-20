@@ -538,27 +538,18 @@ nav {
     margin: 0;
 }
 .subprojectTitle {
-    margin-top: 6vh;
-    font-size: 4vh;
     font-weight: 600;
     color: #3345b1;
 }
 .subproject {
     background-color: white;
-    box-shadow: 0 0 2vh #3346b17c;
-    border-radius: 2vh;
-    padding: 3vh;
-    margin-bottom: 3vh;
 }
 .subprojectName {
-    font-size: 3vh;
     font-weight: 500;
     color: #3345b1;
     margin: 0;
-    margin-bottom: 2vh;
 }
 .subprojectDescription {
-    font-size: 2vh;
     color: #0f1b61;
     margin: 0;
 }
@@ -665,6 +656,23 @@ nav {
     .projectTechnologiesBody {
         font-size: 2vh;
     }
+    .subproject {
+        box-shadow: 0 0 2vh #3346b17c;
+        border-radius: 2vh;
+        padding: 3vh;
+        margin-bottom: 3vh;
+    }
+    .subprojectTitle {
+        margin-top: 6vh;
+        font-size: 4vh;
+    }
+    .subprojectName {
+        font-size: 3vh;
+        margin-bottom: 2vh;
+    }
+    .subprojectDescription {
+        font-size: 2vh;
+    }
 
 }
 
@@ -743,6 +751,23 @@ nav {
         margin-top: 0;
     }
     .projectTechnologiesBody {
+        font-size: 3vw;
+    }
+    .subproject {
+        box-shadow: 0 0 3vw #3346b17c;
+        border-radius: 3vw;
+        padding: 4vw;
+        margin-bottom: 5vw;
+    }
+    .subprojectTitle {
+        margin-top: 8vw;
+        font-size: 5vw;
+    }
+    .subprojectName {
+        font-size: 5vw;
+        margin-bottom: 3vw;
+    }
+    .subprojectDescription {
         font-size: 3vw;
     }
 

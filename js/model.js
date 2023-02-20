@@ -39,6 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Canvas X: " + threeElement.offsetWidth)
     console.log("Canvas Y: " + threeElement.offsetHeight)
 
+    // Determines screen orientation
+    let horizontal = threeElement.offsetHeight > threeElement.offsetWidth
+
     // Lights
     scene.add(new THREE.AmbientLight(0x404040, intensity=2));
     scene.add(new THREE.DirectionalLight(0xffffff, intensity=1));
@@ -58,7 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Gets model into the scene
                 scene.add(gltf.scene);
                 model = gltf.scene;
-                model.position.y = 10
+
+                // Model's starting position
+                if(horizontal){ model.position.y = 10;
+                } else { model.position.y = 0.2; }
                 model.rotation.y = 2.5
 
                 // Animates model
@@ -77,7 +83,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const backdropMaterial = new THREE.MeshBasicMaterial({ map, transparent: true });
             const backdrop = new THREE.Mesh(new THREE.PlaneGeometry(3, 3, 1, 1), backdropMaterial);
             backdrop.rotation.x = 0;
-            backdrop.position.y = 10.0;
+
+            // Backdrop's starting position
+            if(horizontal){ backdrop.position.y = 10.0; }
+            else { backdrop.position.y = 1.0; }
+
             backdrop.position.z = -3;
             scene.add(backdrop);
 
